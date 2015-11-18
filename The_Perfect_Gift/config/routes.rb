@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root to: 'welcome#index'
 
+  get '/search', to: "welcome#search", as: "search"
+  
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
   get "/login", to: "sessions#new"
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :welcome, only: [:index, :search]
+ 
 
 
 #  new_user GET    /signup(.:format)                                               users#new
