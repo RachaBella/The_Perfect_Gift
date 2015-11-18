@@ -29,7 +29,12 @@ gem "nokogiri", ">= 1.6.7.rc"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem "nokogiri", ">= 1.6.7.rc"
+# include material-design
+gem 'bootstrap-material-design'
+
+# pretty urls
+gem 'friendly_id'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
