@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  root to: 'welcome#index'
+
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
   get "/login", to: "sessions#new"
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
       end
     end
   end 
+
+  resources :welcome, only: [:index]
 
   resources :gifts do 
   end
