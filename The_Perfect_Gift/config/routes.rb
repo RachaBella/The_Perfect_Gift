@@ -15,10 +15,8 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :welcome, only: [:index]
+  resources :welcome, only: [:index, :search]
 
-  resources :gifts do 
-  end
 
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
