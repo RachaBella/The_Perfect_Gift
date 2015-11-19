@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   resources :users, :recipents, :gifts 
-
-  get '/search_form', to: "welcome#search_form", as: "search_form"
    
 end
 
