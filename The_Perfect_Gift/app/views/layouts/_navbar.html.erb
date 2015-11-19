@@ -11,7 +11,7 @@
   <div class="navbar-collapse collapse navbar-warning-collapse">
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Search</a></li>
-      <% if @user %>
+      <% if @current_user %>
       <li class="active"><%= link_to "My Saved Gifts", user_path(@current_user) %></li>
       <%end%>
       <li class = "dropdown">
@@ -26,7 +26,7 @@
     <ul class="nav navbar-nav navbar-right">
 
       
-    <% if @user %>
+    <% if @current_user %>
           <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
     			<li><%= link_to "Log out", logout_path, method: :destroy %></li>
     <% else %>

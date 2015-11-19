@@ -11,6 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require welcome.css 
  *= require_self
  *= require bootstrap-3.2.0.min
+
+
  */
+

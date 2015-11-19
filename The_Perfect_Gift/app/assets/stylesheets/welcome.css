@@ -1,0 +1,93 @@
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+}
+
+
+.welcome-bg{
+	background: url(cup.jpg);
+}
+
+.tag-line {
+	text-align: center;
+	margin-top:200px;
+	margin-bottom:100px;
+}
+
+.tag-line h1 {
+	font-size: 80px;
+	color: white;
+}
+
+#welcome-button {
+	height:50px; 
+	width:400px;
+}
+
+.btn {
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+            transition: all 0.3s;
+
+}
+.btn-primary {
+    background: none;
+    border: 3px solid #428bca;
+    color: #428bca;
+}
+.btn-primary:hover,
+.btn-primary:active {
+    color: #FFF;
+    background: #428bca;
+    border-color: #428bca:
+}
+
+.btn-success {
+    background: none;
+    border: 3px solid #5cb85c;
+    color: #5cb85c;
+}
+.btn-success:hover,
+.btn-success:active {
+    color: #FFF;
+    background: #47a447;
+}
+
+.btn-info {
+    background: none;
+    border: 3px solid #5bc0de;
+    color: #5bc0de;
+}
+.btn-info:hover,
+.btn-info:active {
+    color: #FFF;
+    background: #39b3d7;
+}
+
+.btn-warning {
+    background: none;
+    border: 3px solid #f0ad4e;
+    color: #f0ad4e;
+}
+.btn-warning:hover,
+.btn-warning:active {
+    color: #FFF;
+    background: #ed9c28;
+}
+
+.btn-danger {
+    background: none;
+    border: 3px solid #d9534f;
+    color: #d9534f;
+}
+.btn-danger:hover,
+.btn-danger:active {
+    color: #FFF;
+    background: #d2322d;
+}
