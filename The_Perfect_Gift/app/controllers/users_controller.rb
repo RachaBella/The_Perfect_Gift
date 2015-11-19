@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
 	def index
+    @current_user = current_user
 		@users = User.all
 		render :index 
 	end 
 
 	def new
+      @current_user = current_user
 	    @user = User.new
 	    render :new
   	end
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
 
     def show
     	@current_user = current_user
-    	@user = User.find(params[:id])
+    	@user = User.friendly.find(params[:id])
     	render :show
   	end
 end
