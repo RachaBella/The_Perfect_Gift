@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,12 +17,10 @@
  *= require bootstrap-material-design
  *= require_tree .
  *= require style.css
+ *= require welcome.css 
  *= require_self
-<<<<<<< HEAD
-=======
- *= require bootstrap-3.2.0.min
- *= require materialize
->>>>>>> 85f15e93b70c9416f3da3e51113e1fa5ea9590b0
+
  */
 
- @import 'bootstrap-sprockets';
+
+@import "bootstrap-sprockets";

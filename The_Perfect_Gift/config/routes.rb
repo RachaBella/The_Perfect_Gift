@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   #get '/search_form', to: "welcome#search_form", as: "search_form"
 
   get '/search', to: "welcome#search", as: "search"
+  
+  get '/search_form', to: "welcome#search_form", as: "search_form"
 
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
@@ -14,13 +16,14 @@ Rails.application.routes.draw do
 
   delete "/logout", to: "sessions#destroy"
 
+
   resources :users do 
     resources :recipents do
-      resources :gifts
+      resources :gifts do
     end
   end    
 end
-
+end
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
 #                sessions POST   /sessions(.:format)                                             sessions#create
