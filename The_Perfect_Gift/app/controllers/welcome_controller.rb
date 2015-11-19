@@ -10,14 +10,33 @@ class WelcomeController < ApplicationController
 		#url = 'http://api.walmartlabs.com/v1/search?query='
 		var = params[:keywords]
 		@keywords = var.split(/\W+/)
-		@res = []
+		res = []
+		@finalResponse = []
+		varHash = Hash.new 
 		#restUrl = @searchword +'&format=json&apiKey='+ APP_CONFIG['WAL_API_KEY']
 		# Prosperent - good!
 		@keywords.each do |key|
 			url = "http://api.prosperent.com/api/search?api_key=" + APP_CONFIG['PROS_API_KEY']
 			url2 = "&query=" + key
-			@res << HTTParty.get(url + url2)
+			res << HTTParty.get(url + url2)
 		end
+
+		res.each do |res|
+			body = JSON.parse(res.body)
+			body["data"].each do |data|
+				varHash = {
+					:keyword       => data["keyword"],
+					:affiliate_url => data["affiliate_url"],
+					:image_url     => data["image_url"],
+					:price         => data["price"],
+					:description   => data["description"]
+				}
+				@finalResponse << varHash			
+			end
+		end
+		size = @finalResponse.size
+		@finalResponse[0], @finalResponse[size -1], @finalResponse[size/2] = 
+		@finalResponse[size -1], @finalResponse[size/2], @finalResponse[0]
 
 
 		# Shoppable - idk yet

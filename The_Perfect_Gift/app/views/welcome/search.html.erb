@@ -1,8 +1,10 @@
 <%= @keywords %><br>
-
-<% @res.each do |res| %>
-	<% body = JSON.parse(res.body) %>
-	<% body["data"].each do |data| %>
-		<%= data["keyword"] %><br>
-	<% end %>
+	
+<% @finalResponse.each do |res|%>
+	<%= res[:keyword] %>
+	<%= res[:affiliate_url] %>
+	<%= res[:image_url] %>
+	<%= res[:price] %>
+	<%= res[:description] %>
+	<hr>
 <% end %>
