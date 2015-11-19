@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   
   root to: 'welcome#index'
 
+  #get '/search_form', to: "welcome#search_form", as: "search_form"
+
   get '/search', to: "welcome#search", as: "search"
-  
+
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
   get "/login", to: "sessions#new"
@@ -12,8 +14,11 @@ Rails.application.routes.draw do
 
   delete "/logout", to: "sessions#destroy"
 
-  resources :users, :recipents, :gifts 
-   
+  resources :users do 
+    resources :recipents do
+      resources :gifts
+    end
+  end    
 end
 
 #  new_user GET    /signup(.:format)                                               users#new

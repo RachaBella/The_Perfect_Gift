@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require materialize-sprockets
 //= require app
+//= require materialize-sprockets
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree .
