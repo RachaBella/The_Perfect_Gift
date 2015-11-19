@@ -11,9 +11,9 @@
   <div class="navbar-collapse collapse navbar-warning-collapse">
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Search</a></li>
-      <li class="active"><a href="/users/show">My Saved Gifts</a></li>
+      <li class="active"><%= link_to "My Saved Gifts", user_path(@current_user) %></li>
       <li class = "dropdown">
-      <a href="bootstrap-elements.html" data-target="#" class-"dropdown-toggle" data-toggle="dropdown">Cities <b class="caret"></b></a>
+      <a href="bootstrap-elements.html" data-target="#" class-"dropdown-toggle" data-toggle="dropdown">change this <b class="caret"></b></a>
         <ul class = "dropdown-menu">
           <li><a href="/cities/san-francisco">San Francisco</a></li>
           <li><a href="/cities/london">London</a></li>
@@ -22,11 +22,13 @@
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    
-      <li><a href="/users/#{@user.id}/edit">Edit Profile</a></li>
-			<li><%= link_to "Log out", logout_path, method: :destroy %></li>
-	
+
+      <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+    <% if @user %>
+    			<li><%= link_to "Log out", logout_path, method: :destroy %></li>
+<% else %>
 			<li><a href="/login">Log in</a></li>
+   <% end %>
     </ul>
   </div>
 </div>

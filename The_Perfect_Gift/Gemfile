@@ -38,6 +38,8 @@ gem 'friendly_id'
 # voting gem
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'will_paginate'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
