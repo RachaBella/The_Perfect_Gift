@@ -5,7 +5,13 @@ body {
 .welcome-button {
 	height: 50px; 
 	width: 100px;
+
 }
+
+#splash {
+    color:white;
+    text-decoration: none;
+} 
 
 .welcome-bg{
 	background: url(cup.jpg) no-repeat center fixed;
@@ -43,7 +49,8 @@ body {
 .btn-outlined.btn-primary:active {
     color: white;
     background: steelblue;
-    border-color: #428bca:
+    border-color: #428bca;
+
 }
 
 .btn-outlined.btn-success {

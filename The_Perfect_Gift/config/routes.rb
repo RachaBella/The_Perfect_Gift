@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   #get '/search_form', to: "welcome#search_form", as: "search_form"
 
   get '/search', to: "welcome#search", as: "search"
-<<<<<<< HEAD
+
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
-=======
->>>>>>> front-end
+
 
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
