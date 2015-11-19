@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   
 	root to: 'welcome#index'
 
-	#get '/search_form', to: "welcome#search_form", as: "search_form"
-
 	get '/search', to: "welcome#search", as: "search"
 
 	get '/search_form', to: "welcome#search_form", as: "search_form"
