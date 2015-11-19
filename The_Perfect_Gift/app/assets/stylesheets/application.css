@@ -21,8 +21,9 @@
  *= bootstrap-sprockets 
  *= materialize 
  *= require_self
+ *= require bootstrap-material-design
  *= require bootstrap-3.2.0.min
-
+ *= require material-fullpalette.min
 
  */
 
