@@ -11,6 +11,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
+ *= require bootstrap-3.2.0.min
+ *= require materialize
+ *= require bootstrap-material-design
  *= require_tree .
  *= require style.css
  *= require welcome.css 
@@ -20,8 +24,11 @@
  *= require bootstrap-material-design
  *= require bootstrap-3.2.0.min
  *= require material-fullpalette.min
+
  */
+
 
 
 @import "bootstrap-sprockets";
 @import "materialize";
+
