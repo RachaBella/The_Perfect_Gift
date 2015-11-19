@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
 
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
-		var = params[:keywords]
+		var = params[:keyword]
 		@keywords = var.split(/\W+/)
 		res = []
 		@finalResponse = []
