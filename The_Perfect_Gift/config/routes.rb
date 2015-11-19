@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 	#sign in route
 	post "/sessions", to: "sessions#create"
 
-	delete "/logout", to: "sessions#destroy"
+	post "/logout" => "sessions#destroy"
 
 	resources :users do
 		resources :recipents do 
