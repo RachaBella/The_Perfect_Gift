@@ -1,2 +1,11 @@
+$(document).ready( function() {
+	loadFunctions()
 
-var input = $('#searchInput').val();
+});
+
+function loadFunctions()
+{
+	$('#addButton').on('click', function () {
+		
+	})
+}
