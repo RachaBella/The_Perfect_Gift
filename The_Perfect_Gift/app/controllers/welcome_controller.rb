@@ -3,12 +3,15 @@ class WelcomeController < ApplicationController
 		render :index
 		
 	end
+	def search_form
+		render :search_form
+	end
 	def search
 		#@current_user = current_user
 
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
-		var = params[:keywords]
+		var = params[:keyword]
 		@keywords = var.split(/\W+/)
 		res = []
 		@finalResponse = []

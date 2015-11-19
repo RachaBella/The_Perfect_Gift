@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/search', to: "welcome#search", as: "search"
   
+  get '/search_form', to: "welcome#search_form", as: "search_form"
+
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
   get "/login", to: "sessions#new"
