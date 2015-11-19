@@ -1,0 +1,33 @@
+<div class="navbar navbar-warning">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+        <a href="/"><img src="http://i.imgur.com/vr3kkf7.png" height="55"></a>
+  </div>
+
+  <div class="navbar-collapse collapse navbar-warning-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Search</a></li>
+      <li class="active"><a href="/users/show">My Saved Gifts</a></li>
+      <li class = "dropdown">
+      <a href="bootstrap-elements.html" data-target="#" class-"dropdown-toggle" data-toggle="dropdown">Cities <b class="caret"></b></a>
+        <ul class = "dropdown-menu">
+          <li><a href="/cities/san-francisco">San Francisco</a></li>
+          <li><a href="/cities/london">London</a></li>
+          <li><a href="/cities/gibraltar">Gibraltar</a></li>
+        </ul>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+      <li><a href="/users/#{@user.id}/edit">Edit Profile</a></li>
+			<li><%= link_to "Log out", logout_path, method: :destroy %></li>
+	
+			<li><a href="/login">Log in</a></li>
+    </ul>
+  </div>
+</div>
+

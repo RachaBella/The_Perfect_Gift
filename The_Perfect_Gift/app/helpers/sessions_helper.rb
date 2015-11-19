@@ -8,14 +8,15 @@ module SessionsHelper
 	def current_user
 		if session[:id] == nil
 			@current_user = nil
-		else @current_user = User.find(session[:id])
+		else 
+			@current_user = User.find(session[:id])
 		end
 		
 	end
 
 	def logged_in?
 		if current_user == nil
-			redirect_to "/sign_in"
+			redirect_to "/login"
 		end
 	end
 
