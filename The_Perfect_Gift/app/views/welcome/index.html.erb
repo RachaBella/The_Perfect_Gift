@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 
-<div class="welcome-bg"> 
-</div>
-
-=======
 <%= render partial: "/layouts/navbar" %>
->>>>>>> 1675763920dcb65b2e4e771c7da2fff1c41aee17
 
-<%= form_tag("/search", method: "get") do %>
- <%= label_tag(:keyword, "Search for:") %>
- <%= text_field_tag(:keyword) %>
- <%= submit_tag("Search") %>
-<% end %>
+<div class = "welcome">
 
+	<%= form_tag("/search", method: "get") do %>
+	<%= label_tag(:keyword, "Search for:") %>
+	<%= text_field_tag(:keyword) %>
+	<%= submit_tag("Search") %>
+	<% end %>
 
+	<h4> Find the Perfect Gift </h4> 
 
+</div>  
