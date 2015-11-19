@@ -15,8 +15,9 @@
  *= require style.css
  *= require welcome.css 
  *= require_self
- =* require bootstrap-sprockets
  *= require bootstrap-3.2.0.min
- *= require materialize
+ *
  */
 
+@import "bootstrap-sprockets";
+@import "materialize";
