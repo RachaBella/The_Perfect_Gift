@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
 	get '/search', to: "welcome#search", as: "search"
 
-
-  get '/search', to: "welcome#search", as: "search"
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
 
@@ -17,6 +15,7 @@ Rails.application.routes.draw do
 
 	post "/logout" => "sessions#destroy"
 
+  get "/aboutus", to: "layouts#aboutus", as: "aboutus"
 
 
   resources :users do 
