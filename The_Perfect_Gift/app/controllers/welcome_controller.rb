@@ -7,8 +7,8 @@ class WelcomeController < ApplicationController
 		render :search_form
 	end
 	def search
-		#@current_user = current_user
-
+		@current_user = current_user
+		@recipient= Recipient.new
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
 		var = params[:keyword]
