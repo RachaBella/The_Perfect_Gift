@@ -2,9 +2,14 @@ Rails.application.routes.draw do
   
   root to: 'welcome#index'
 
+  #get '/search_form', to: "welcome#search_form", as: "search_form"
+
   get '/search', to: "welcome#search", as: "search"
+<<<<<<< HEAD
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
+=======
+>>>>>>> front-end
 
   get "/signup", to: "users#new", as: "new_user"
   # #sign in user page
@@ -20,7 +25,6 @@ Rails.application.routes.draw do
 			end
 		end
 	end
-	
 end
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
