@@ -1,3 +1,8 @@
-<%= @res %>
+<%= @keywords %><br>
 
-<%= @searchword %>
+<% @res.each do |res| %>
+	<% body = JSON.parse(res.body) %>
+	<% body["data"].each do |data| %>
+		<%= data["keyword"] %><br>
+	<% end %>
+<% end %>
