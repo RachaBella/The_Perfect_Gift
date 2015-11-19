@@ -2,9 +2,14 @@ body {
 
 }
 
+.navbar navbar-warning {
+    background-color: white;
+
+}
+
 .welcome-button {
-	height: 50px; 
-	width: 100px;
+	height: 40px; 
+	width: 50px;
 
 }
 
@@ -41,8 +46,9 @@ body {
     background: #03A9F4;
     border: 3px solid #428bca;
     color: white;
-    height: 50px; 
+    height: 40px; 
 	width: 300px;
+ 
 }
 
 .btn-outlined.btn-primary:hover,
