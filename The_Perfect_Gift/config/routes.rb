@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 			end
 		end
 	end
+	
 end
-
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
 #                sessions POST   /sessions(.:format)                                             sessions#create
