@@ -10,15 +10,11 @@ Rails.application.routes.draw do
   #sign in route
   post "/sessions", to: "sessions#create"
 
-  resources :users do 
-    resources :recipents do 
-      resources :gifts do 
-      end
-    end
-  end 
+  delete "/logout", to: "sessions#destroy"
 
- 
-
+  resources :users, :recipents, :gifts 
+   
+end
 
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
@@ -56,4 +52,4 @@ Rails.application.routes.draw do
 #                         PUT    /gifts/:id(.:format)                                            gifts#update
 #                         DELETE /gifts/:id(.:format)                                            gifts#destroy
 
-end
+
