@@ -14,8 +14,11 @@ Rails.application.routes.draw do
 
   delete "/logout", to: "sessions#destroy"
 
-  resources :users, :recipents, :gifts 
-   
+resources :users do
+	resources :recipents do 
+		resources :gifts do
+		end
+	end
 end
 
 #  new_user GET    /signup(.:format)                                               users#new

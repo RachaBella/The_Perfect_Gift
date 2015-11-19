@@ -1,16 +1,17 @@
-body {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: repeat;
-	width: 100%;
-	height: 100%;
+body {	
+
 }
 
+.welcome-button {
+	height: 50px; 
+	width: 100px;
+}
 
 .welcome-bg{
-	background: url(cup.jpg);
+	background: url(cup.jpg) no-repeat center fixed;
+	position: absolute; height: 100%; width: 100%;
+	background-size: contain;
+	background-size: 100% 100%;
 }
 
 .tag-line {
@@ -24,70 +25,67 @@ body {
 	color: white;
 }
 
-#welcome-button {
-	height:50px; 
-	width:400px;
-}
-
-.btn {
+.btn-outlined {
     border-radius: 0;
     -webkit-transition: all 0.3s;
        -moz-transition: all 0.3s;
             transition: all 0.3s;
-
 }
-.btn-primary {
-    background: none;
+.btn-outlined.btn-primary {
+    background: #03A9F4;
     border: 3px solid #428bca;
-    color: #428bca;
+    color: white;
+    height: 50px; 
+	width: 300px;
 }
-.btn-primary:hover,
-.btn-primary:active {
-    color: #FFF;
-    background: #428bca;
+
+.btn-outlined.btn-primary:hover,
+.btn-outlined.btn-primary:active {
+    color: white;
+    background: steelblue;
     border-color: #428bca:
 }
 
-.btn-success {
+.btn-outlined.btn-success {
     background: none;
     border: 3px solid #5cb85c;
     color: #5cb85c;
 }
-.btn-success:hover,
-.btn-success:active {
+.btn-outlined.btn-success:hover,
+.btn-outlined.btn-success:active {
     color: #FFF;
     background: #47a447;
 }
 
-.btn-info {
+.btn-outlined.btn-info {
     background: none;
     border: 3px solid #5bc0de;
     color: #5bc0de;
 }
-.btn-info:hover,
-.btn-info:active {
+.btn-outlined.btn-info:hover,
+.btn-outlined.btn-info:active {
     color: #FFF;
     background: #39b3d7;
 }
 
-.btn-warning {
+.btn-outlined.btn-warning {
     background: none;
     border: 3px solid #f0ad4e;
     color: #f0ad4e;
 }
-.btn-warning:hover,
-.btn-warning:active {
+.btn-outlined.btn-warning:hover,
+.btn-outlined.btn-warning:active {
     color: #FFF;
     background: #ed9c28;
 }
 
-.btn-danger {
+.btn-outlined.btn-danger {
     background: none;
     border: 3px solid #d9534f;
     color: #d9534f;
 }
-.btn-danger:hover,
-.btn-danger:active {
+.btn-outlined.btn-danger:hover,
+.btn-outlined.btn-danger:active {
     color: #FFF;
     background: #d2322d;
 }
