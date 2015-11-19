@@ -1,21 +1,26 @@
 Rails.application.routes.draw do
   
-  root to: 'welcome#index'
+	root to: 'welcome#index'
 
-  #get '/search_form', to: "welcome#search_form", as: "search_form"
+	get '/search', to: "welcome#search", as: "search"
 
+<<<<<<< HEAD
   get '/search', to: "welcome#search", as: "search"
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
+=======
+	get '/search_form', to: "welcome#search_form", as: "search_form"
+>>>>>>> f1342a31a0ed9b906ee1b25efefe5c9b192b79b2
 
-  get "/signup", to: "users#new", as: "new_user"
-  # #sign in user page
-  get "/login", to: "sessions#new"
-  #sign in route
-  post "/sessions", to: "sessions#create"
+	get "/signup", to: "users#new", as: "new_user"
+	# #sign in user page
+	get "/login", to: "sessions#new"
+	#sign in route
+	post "/sessions", to: "sessions#create"
 
-  delete "/logout", to: "sessions#destroy"
+	post "/logout" => "sessions#destroy"
 
+<<<<<<< HEAD
 
   resources :users do 
     resources :recipents do
@@ -23,6 +28,14 @@ Rails.application.routes.draw do
     end
   end    
 end
+=======
+	resources :users do
+		resources :recipents do 
+			resources :gifts do
+			end
+		end
+	end
+>>>>>>> f1342a31a0ed9b906ee1b25efefe5c9b192b79b2
 end
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
