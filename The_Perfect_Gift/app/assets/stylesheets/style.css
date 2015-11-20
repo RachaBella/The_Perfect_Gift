@@ -3,7 +3,6 @@
    list-style:none;
 
 }
-
 .carousel-indicators li {
     display: inline-block;
     width: 48px;
@@ -22,17 +21,17 @@
     margin: 10px;
     background-color: #ffff99;
 }
-
 #sign-in {
     color: white;
     font-size: 60px;
 }
-
 input#user_username, input#user_email, input#user_password, #signin-input{
     padding: 7px;
     border: solid 5px #0288D1;
+    background-color: white;
     margin: 2px;
     color: black;
+    font-size: 18px;
     width: 375px;
 }
 select#occasion.form-control {
@@ -55,12 +54,32 @@ select#occasion.form-control {
 
 /* Background image for front page */
 html body { 
-    background: url("boxes.png") no-repeat center;
-    background-position: 50% 200px;
     background-color: lightblue;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: contain;
 }
+.welcome-button {
+    height: 40px; 
+    width: 100px;
+
+}
+#splash {
+    color:white;
+    text-decoration: none;
+} 
+.tag-line {
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:100px;
+}
+.tag-line h1 {
+    font-size: 80px;
+    color: white;
+}
+.btn-lg {
+    width: 250px; 
+    height:50px;
+}
+
+
+
 
