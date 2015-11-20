@@ -35,10 +35,18 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     color: black;
     width: 375px;
 }
+select#occasion.form-control {
+    padding: 7px;
+    border: solid 5px #0288D1;
+    background-color: white;
+    margin: 2px;
+    color: black;
+    width: 300px;
+}
 
 #user-welcome {
     color: white;
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .white-text {
