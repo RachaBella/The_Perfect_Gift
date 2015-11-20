@@ -8,14 +8,14 @@
 	</div>
 </div>
 <div class="row">
-	<h1 class="white-text" align="center">View your recipients here!</h2>
+	<h1 class="gray-text" align="center">View your recipients here!</h2>
 	<div class="row">
 		<% if @recipients.count !=0 %>
 		<%= collection_select(:user,:recipient_id , @recipients, :id, :name, {:prompt=>true}, {:class =>"form-control"})%>
 		<% else %>
 		<div class="col-xs-3 col-xs-offset-3" align="center">
 			<br>
-			<p class="white-text">You have no recipients yet, create a new one!</p>
+			<p class="gray-text">You have no recipients yet, create a new one!</p>
 		</div>
 		<div class="col-xs-3" align="center">
 			<br>
@@ -27,7 +27,7 @@
 		<%end%>
 	</div>
 	<% if @recipients.count !=0 %>
-	<h4 class="white-text" align="center">For which occasion?</h2>
+	<h4 class="gray-text" align="center">For which occasion?</h2>
 	<div align="center">
 		<%= select_tag(:occasion, options_for_select([['Birthday',1],['Wedding',2],['Christmas',3],['Thanksgiving',4],['New year',5]]), {:class =>"form-control"}) %>
 
