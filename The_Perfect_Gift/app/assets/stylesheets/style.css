@@ -1,3 +1,4 @@
+/* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
    list-style:none;
@@ -23,6 +24,7 @@
     background-color: #ffff99;
 }
 
+/* Sign In */
 #sign-in {
     color: white;
     font-size: 60px;
@@ -36,6 +38,7 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     width: 375px;
 }
 
+/* Welcome page*/
 #user-welcome {
     color: white;
     font-size: 70px;
@@ -52,5 +55,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+/* Cards for text on pages */
+.card-autosize {
+    width: auto;
+    padding: .25em;
 }
 
