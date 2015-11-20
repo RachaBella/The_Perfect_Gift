@@ -21,11 +21,7 @@
  *= bootstrap-sprockets 
  *= materialize 
  *= require_self
-<<<<<<< HEAD
- *= require materialize
-=======
  *= require bootstrap-material-design
->>>>>>> splash
  *= require bootstrap-3.2.0.min
  *= require material-fullpalette.min
 

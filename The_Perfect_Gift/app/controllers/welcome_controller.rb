@@ -5,7 +5,9 @@ class WelcomeController < ApplicationController
 		
 	end
 	def search_form
+		@recipient= Recipient.new
 		@current_user = current_user
+		@recipients= @current_user.recipients
 		render :search_form
 	end
 	def search
