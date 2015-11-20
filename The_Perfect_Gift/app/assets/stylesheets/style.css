@@ -1,3 +1,4 @@
+/* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
    list-style:none;
@@ -21,6 +22,7 @@
     margin: 10px;
     background-color: #ffff99;
 }
+
 #sign-in {
     color: white;
     font-size: 60px;
@@ -43,6 +45,7 @@ select#occasion.form-control {
     width: 300px;
 }
 
+/* Welcome page*/
 #user-welcome {
     color: white;
     font-size: 80px;
@@ -82,4 +85,10 @@ html body {
 
 
 
+
+/* Cards for text on pages */
+.card-autosize {
+    width: auto;
+    padding: .25em;
+}
 
