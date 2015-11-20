@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :usernames
 	root to: 'welcome#index'
 
 	get '/search', to: "welcome#search", as: "search"
