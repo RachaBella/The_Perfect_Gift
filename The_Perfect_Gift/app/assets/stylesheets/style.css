@@ -92,3 +92,41 @@ html body {
     padding: .25em;
 }
 
+/* Styling from Christ */
+body {  
+
+}
+
+.welcome-button {
+    height: 40px; 
+    width: 100px;
+
+}
+
+#splash {
+    color:white;
+    text-decoration: none;
+} 
+
+.welcome-bg{
+    position: absolute; height: 100%; width: 100%;
+    background-size: contain;
+    background-size: 100% 100%;
+}
+
+.tag-line {
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:100px;
+}
+
+.tag-line h1 {
+    font-size: 80px;
+    color: white;
+}
+
+.btn-lg {
+    width: 250px; 
+    height:50px;
+}
+
