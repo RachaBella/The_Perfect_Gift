@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
 	root to: 'welcome#index'
 
+	get "/aboutus", to: "layouts#aboutus", as: "aboutus"
+
 	get '/search', to: "welcome#search", as: "search"
 
 	get '/search_form', to: "welcome#search_form", as: "search_form"
@@ -14,10 +16,10 @@ Rails.application.routes.draw do
 
 	post "/logout" => "sessions#destroy"
 
+
 	resources :users do
 		resources :recipents do 
-			resources :gifts do
-			end
+			resources :gifts 
 		end
 	end
 

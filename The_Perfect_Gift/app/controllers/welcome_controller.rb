@@ -1,9 +1,11 @@
 class WelcomeController < ApplicationController
 	def index
+		@current_user = current_user
 		render :index
 		
 	end
 	def search_form
+		@current_user = current_user
 		render :search_form
 	end
 	def search
