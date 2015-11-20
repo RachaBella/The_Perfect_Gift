@@ -4,18 +4,29 @@ class WelcomeController < ApplicationController
 		render :index
 		
 	end
+
 	def search_form
 		@recipient= Recipient.new
-		@current_user = current_user
-		@recipients= @current_user.recipients
-		render :search_form
+		if @current_user = current_user
+			@recipients= @current_user.recipients
+			render :search_form
+		else  
+			flash[:notice] = "Please log in to search"
+			redirect_to root_path
+		end
 	end
+
 	def search
 		@current_user = current_user
 		@recipient= Recipient.new
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
 		var = params[:keyword]
+		puts "keyword is !#{params[:keyword] }!"
+		if var.nil? || var.empty?
+			flash[:notice] = "Please enter something into the search field"
+			redirect_to search_form_path and return
+		end
 		@keywords = var.split(/\W+/)
 		res = []
 		@finalResponse = []

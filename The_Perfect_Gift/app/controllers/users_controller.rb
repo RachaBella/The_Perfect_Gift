@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @current_user = current_user
     @users = User.all
     render :index 
-  end 
+   
     User.find_each(&:save)
 		@users = User.all
 		render :index 
@@ -35,7 +35,6 @@ class UsersController < ApplicationController
           format.json { render json: @current_user.errors, status: :unprocessable_entity }
         end
       end
-
      # <-- go to show
   end
 
