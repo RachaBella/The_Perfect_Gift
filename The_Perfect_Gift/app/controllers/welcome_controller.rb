@@ -13,6 +13,7 @@ class WelcomeController < ApplicationController
 	def search
 		@current_user = current_user
 		@recipient= Recipient.new
+		@gift = Gift.new
 		@recipients =  @current_user.recipients
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
