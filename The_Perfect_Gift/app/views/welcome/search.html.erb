@@ -1,12 +1,28 @@
 <%= render partial: "/layouts/navbar" %>
+The chosen recipient :
+<%= @recipientChosen %>
 
+The chosen occasion :
+<%= @occasionChosen%>
 <% count=0 %><br>
 	
 	<hr>
 		
     <div class="container">
     <div class="row">
-        <div class="col-md-12 div">
+        <div class="col-md-12 col l12 div">
+        <div class="col l6 col s12" align="center">
+            <div class ="col l6 col s12">
+              <%= collection_select(:user, :recipient_id , @recipients, :id, :name, {:default=> @occasionChosen}, {:class =>"form-control"})%>
+            </div>
+            <div class='col l6 col s12'>
+
+            <p style="font-weight:bold"> Or add a new one</p>
+                <a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
+                    <i class="material-icons">+</i>
+                    </a>
+            </div>
+        </div>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <div class="col-md-12 div" align="center">
                   <ul class="carousel-inner">
@@ -72,9 +88,7 @@
             </div>
             
             <%= f.submit "Add recipient", class: "waves-effect waves-light btn", id:"addRecipient" %>
-      <%end%>
-
-      
+      <%end%> 
     </div>
       
         

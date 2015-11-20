@@ -13,8 +13,11 @@ class WelcomeController < ApplicationController
 	def search
 		@current_user = current_user
 		@recipient= Recipient.new
+		@recipients =  @current_user.recipients
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
+		@recipientChosen = Recipient.find(params[:user]["recipient_id"]).name
+		@occasionChosen  = params[:occasion]
 		var = params[:keyword]
 		@keywords = var.split(/\W+/)
 		res = []

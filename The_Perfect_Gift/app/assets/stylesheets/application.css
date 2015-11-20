@@ -12,18 +12,19 @@
  * file per style scope.
  *
 
+ 
+ *= require_tree .
  *= require bootstrap-3.2.0.min
  *= require materialize
  *= require bootstrap-material-design
- *= require_tree .
  *= require style.css
- *= require welcome.css 
- *= bootstrap-sprockets 
- *= materialize 
+ *= require welcome.css  
+ *= require materialize 
  *= require_self
  *= require bootstrap-material-design
  *= require bootstrap-3.2.0.min
  *= require material-fullpalette.min
 
  */
+ @import "bootstrap-sprockets"
 
