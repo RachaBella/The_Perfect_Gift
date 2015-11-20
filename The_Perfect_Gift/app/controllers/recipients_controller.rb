@@ -8,11 +8,13 @@ class RecipientsController < ApplicationController
 	end
 
 	def create
+		p params
 		@current_user = current_user
 		@recipient = Recipient.create(params.require(:recipient).permit(:name, :email))
 		if @recipient.save
+			p  "sqved"
 			@current_user.recipients << @recipient
-			redirect_to search_path
+			redirect_to root_path
 		else
 			redirect_to root_path
 		end
