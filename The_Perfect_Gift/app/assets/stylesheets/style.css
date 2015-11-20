@@ -47,7 +47,7 @@ input#user_username, input#user_email, input#user_password, #signin-input{
 
 /* Background image for front page */
 body { 
-    background-image: url("cupcake.jpeg");
+    background-color: darkblue;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
