@@ -13,7 +13,6 @@
  *
 
  *= require bootstrap-3.2.0.min
- *= require materialize
  *= require bootstrap-material-design
  *= require_tree .
  *= require style.css
@@ -27,8 +26,4 @@
 
  */
 
-
-
-@import "bootstrap-sprockets";
-@import "materialize";
 

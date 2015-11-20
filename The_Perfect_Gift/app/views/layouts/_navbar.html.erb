@@ -1,5 +1,5 @@
 <div class = "nav">
-<div class="navbar navbar-material-light-blue">
+<div class="navbar navbar-material-blue">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-danger-collapse">
       <span class="icon-bar"></span>
@@ -24,8 +24,10 @@
     <% if @current_user %>
     			<li><%= link_to "LOG OUT", logout_path, method: :destroy %></li>
     <% else %>
+
       <li class = "active"><%= link_to "SIGN UP", new_user_path(@current_user) %></li>
 			<li class = "active"><%= link_to "LOGIN", login_path(@current_user) %></li>
+
     <% end %>
     </ul>
   </div>
