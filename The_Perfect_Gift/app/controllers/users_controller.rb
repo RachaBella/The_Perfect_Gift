@@ -4,6 +4,11 @@ class UsersController < ApplicationController
     @users = User.all
     render :index 
   end 
+    User.find_each(&:save)
+		@users = User.all
+		render :index 
+	end 
+
 
   def new
     @current_user = current_user

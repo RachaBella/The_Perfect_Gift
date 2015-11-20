@@ -45,8 +45,8 @@
 <div class="container">
   <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6" align="center">
-           <a class="btn-floating btn-large waves-effect waves-light red">
-            <i class="material-icons" id="addButton">+</i>
+           <a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
+            <i class="material-icons">+</i>
            </a>
       </div>
       
@@ -56,7 +56,24 @@
            </a>
       </div>
    </div>
-   <div class="col s12" >
+
+   <div class="col s12" style="display:none" id='recipient-form' >
+      <%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
+            <div class="row">
+              <div class="input-field col s6">
+              <%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"validate" %>
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :email, placeholder: "Recipient email", :id => "email" %>
+              </div>
+            </div>
+            
+            <%= f.submit "Add recipient", class: "waves-effect waves-light btn", id:"addRecipient" %>
+      <%end%>
+
       
     </div>
       

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :usernames
 	root to: 'welcome#index'
 
-	get '/search', to: "welcome#search", as: "search"
+
+  get '/search', to: "welcome#search", as: "search"
+
 
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
@@ -20,12 +22,11 @@ Rails.application.routes.draw do
 
 
   resources :users do 
-    resources :recipents do
-      resources :gifts do
+
+    resources :recipients do
+      resources :gifts
     end
   end    
-end
-
 
 end
 #  new_user GET    /signup(.:format)                                               users#new
