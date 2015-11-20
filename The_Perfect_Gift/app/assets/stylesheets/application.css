@@ -17,9 +17,11 @@
  *= bootstrap-sprockets 
  *= materialize 
  *= require_self
+ *= require materialize
  *= require bootstrap-3.2.0.min
  */
 
 @import "bootstrap-sprockets";
 @import "materialize";
+
 
