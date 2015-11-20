@@ -36,6 +36,14 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     width: 375px;
 }
 
+#user-welcome {
+    color: white;
+    font-size: 70px;
+}
+
+.white-text {
+    color:white;
+}
 
 
 
