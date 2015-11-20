@@ -1,6 +1,7 @@
-<div class="navbar navbar-warning">
+<div class = "nav">
+<div class="navbar navbar-material-light-blue">
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-danger-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -8,33 +9,26 @@
         <a href="/"><img src="http://i.imgur.com/vr3kkf7.png" height="55"></a>
   </div>
 
-  <div class="navbar-collapse collapse navbar-warning-collapse">
+  <div class="navbar-collapse collapse navbar-danger-collapse">
     <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "About Us", aboutus_path %></li>
       <li class="active"><a href="/search_form">Search</a></li>
       <% if @current_user %>
         <li class="active"><%= link_to "My Saved Gifts", user_path(@current_user) %></li>
 
       <%end%>
-      <li class = "dropdown">
-      <a href="bootstrap-elements.html" data-target="#" class-"dropdown-toggle" data-toggle="dropdown">change this <b class="caret"></b></a>
-        <ul class = "dropdown-menu">
-          <li><a href="/cities/san-francisco">San Francisco</a></li>
-          <li><a href="/cities/london">London</a></li>
-          <li><a href="/cities/gibraltar">Gibraltar</a></li>
-        </ul>
-
     </ul>
     <ul class="nav navbar-nav navbar-right">
 
       
     <% if @current_user %>
-          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
-    			<li><%= link_to "Log out", logout_path, method: :destroy %></li>
+    			<li><%= link_to "LOG OUT", logout_path, method: :destroy %></li>
     <% else %>
-      <li><a href="/signup">Sign Up</a></li>
-			<li><a href="/login">Log in</a></li>
+      <li class = "active"><%= link_to "SIGN UP", new_user_path(@current_user) %></li>
+			<li class = "active"><%= link_to "LOGIN", login_path(@current_user) %></li>
     <% end %>
     </ul>
   </div>
+</div>
 </div>
 

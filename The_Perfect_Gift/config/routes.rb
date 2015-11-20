@@ -1,25 +1,32 @@
 Rails.application.routes.draw do
   
-  root to: 'welcome#index'
+	root to: 'welcome#index'
+
 
   get '/search', to: "welcome#search", as: "search"
+
 
   
   get '/search_form', to: "welcome#search_form", as: "search_form"
 
-  get "/signup", to: "users#new", as: "new_user"
-  # #sign in user page
-  get "/login", to: "sessions#new"
-  #sign in route
-  post "/sessions", to: "sessions#create"
+	get "/signup", to: "users#new", as: "new_user"
+	# #sign in user page
+	get "/login", to: "sessions#new"
+	#sign in route
+	post "/sessions", to: "sessions#create"
 
-  delete "/logout", to: "sessions#destroy"
+	post "/logout" => "sessions#destroy"
+
+  get "/aboutus", to: "layouts#aboutus", as: "aboutus"
+
 
   resources :users do 
+
     resources :recipients do
       resources :gifts
     end
   end    
+
 end
 #  new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
