@@ -1,11 +1,23 @@
-Sign In
+<%= render partial: "/layouts/navbar" %>
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign In" %>
-<% end %> 
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3" align="center">
+			<h1 id="sign-in">Login</h1>
+			<br><br>
+
+			<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+				<div>
+				<%= f.text_field :email, placeholder: "Email", :id => "signin-input"%>
+				</div>
+				<div>
+				<%= f.password_field :password, placeholder: "Password", :id => "signin-input"%>
+				</div>
+				<br><br><br>
+				<%= f.submit "Sign In", :class => "btn-primary btn-lg btn-material-blue"%>
+			<% end %> 
+
+		</div>
+	</div>
+</div>
+		

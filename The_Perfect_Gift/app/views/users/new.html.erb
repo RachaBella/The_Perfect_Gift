@@ -1,21 +1,24 @@
 <%= render partial: "/layouts/navbar" %>
 
-<div class="welcome-bg"> 
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" align="center">
+      <h1 id="sign-in">Sign Up</h1><br><br>
 
+      <%= form_for @user do |f| %>
+        <div>
+          <%= f.text_field :username, placeholder: "Username" %>
+        </div>
+        <div>
+          <%= f.text_field :email, placeholder: "Email" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <br><br><br>
+        <%= f.submit "Sign Up", :class => "btn-primary btn-lg btn-material-blue"%>
+      <% end %>
 
-Sign Up
-
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :username, placeholder: "Username" %>
+    </div>
   </div>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %> 
-
-</div>
+</div> 
