@@ -11,6 +11,9 @@ function loadFunctions()
 
 	$('#addRecipient').on('click', function () {
 		$('#recipient-form').slideUp(350);
+		/*$.post('/users/:id/recipients', $('.recipientForm').serialize(), function (response) {
+
+		});*/
 	});
 
 }

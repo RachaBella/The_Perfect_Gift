@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def index
     @current_user = current_user
+    User.find_each(&:save)
 		@users = User.all
 		render :index 
 	end 

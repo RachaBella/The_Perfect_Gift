@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
 	post "/logout" => "sessions#destroy"
 
-
 	resources :users do
 		resources :recipents do 
 			resources :gifts 
