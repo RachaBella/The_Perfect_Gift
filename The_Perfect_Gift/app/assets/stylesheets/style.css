@@ -54,7 +54,7 @@ select#occasion.form-control {
 }
 
 /* Background image for front page */
-body { 
+html body { 
     background-color: darkblue;
     -webkit-background-size: cover;
     -moz-background-size: cover;
