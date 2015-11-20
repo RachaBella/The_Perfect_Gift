@@ -22,7 +22,7 @@ class WelcomeController < ApplicationController
 		# Prosperent - good!
 		@keywords.each do |key|
 			url = "http://api.prosperent.com/api/search?api_key=" + APP_CONFIG['PROS_API_KEY']
-			url2 = "&query=" + key
+			url2 = "&query=" + key + "&limit=25"
 			res << HTTParty.get(url + url2)
 		end
 
