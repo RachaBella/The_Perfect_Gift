@@ -45,9 +45,12 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     color:white;
 }
 
-
-
-
-
-
+/* Background image for front page */
+body { 
+    background-image: url("cupcake.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 

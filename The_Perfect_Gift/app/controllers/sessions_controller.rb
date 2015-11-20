@@ -10,11 +10,12 @@ class SessionsController < ApplicationController
 		@user = User.confirm(user_params)
 		if @user
 			login(@user)
-			redirect_to user_path (@user)
+			redirect_to "/search_form"
 		else
 			redirect_to "/login"
 		end
 	end
+
 	def destroy
 		logout
 		redirect_to root_path
