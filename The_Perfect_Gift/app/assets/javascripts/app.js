@@ -34,13 +34,14 @@ function loadFunctions()
 			 keyword: $('li.active p#keyword').text(),
 			 price: $('li.active p#price').text(),
 			 description: $('li.active p#description').text(),
-			 recipient_id: $('#user_recipient_id').val()
+			 recipient_id: $('#user_recipient_id').val(),
+			 occasion: $("#occasion").val()
 
 		}
 		console.log('data is', data)
 		$.ajax( {
 			type: 'POST',
-			url : '/senddata',
+			url : '/users/'+ data.user_id+ '/recipients/'+ data.recipient_id + '/gifts',
 			datatype: 'json',
 			data: data
 		})

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 	post "/senddata", to: "gifts#receivedata"
 
 	resources :users do
-		resources :recipents do 
+		resources :recipients do 
 			resources :gifts 
 		end
 	end
