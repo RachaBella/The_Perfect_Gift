@@ -26,4 +26,27 @@ function loadFunctions()
 		});*/
 	});
 
+	$('#addGift').on('click', function () {
+		var data = {
+			 user_id: $('.user_id').attr('id'),
+			 imageUrl: $('li.active p#img').text(),
+			 url: $('li.active p#url').text(),
+			 keyword: $('li.active p#keyword').text(),
+			 price: $('li.active p#price').text(),
+			 description: $('li.active p#description').text(),
+			 recipient_id: $('#user_recipient_id').val()
+
+		}
+		console.log('data is', data)
+		$.ajax( {
+			type: 'POST',
+			url : '/senddata',
+			datatype: 'json',
+			data: data
+		})
+
+		
+	})
+
+
 }

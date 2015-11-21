@@ -1,4 +1,3 @@
-
 .carousel-inner{
     padding:0px;
    list-style:none;
@@ -23,3 +22,45 @@
     margin: 10px;
     background-color: #ffff99;
 }
+
+#sign-in {
+    color: white;
+    font-size: 60px;
+}
+
+input#user_username, input#user_email, input#user_password, #signin-input{
+    padding: 7px;
+    border: solid 5px #0288D1;
+    margin: 2px;
+    color: black;
+    width: 375px;
+}
+select#occasion.form-control {
+    padding: 7px;
+    border: solid 5px #0288D1;
+    background-color: white;
+    margin: 2px;
+    color: black;
+    width: 300px;
+}
+
+#user-welcome {
+    color: white;
+    font-size: 80px;
+}
+
+.white-text {
+    color:white;
+}
+
+/* Background image for front page */
+html body { 
+    background: url("boxes.png") no-repeat center;
+    background-position: 50% 200px;
+    background-color: lightblue;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+}
+

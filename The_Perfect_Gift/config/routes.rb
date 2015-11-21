@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   
+  resources :usernames
 	root to: 'welcome#index'
 
+	get "/aboutus", to: "layouts#aboutus", as: "aboutus"
 
-  get '/search', to: "welcome#search", as: "search"
+	get '/search', to: "welcome#search", as: "search"
 
-
-  
-  get '/search_form', to: "welcome#search_form", as: "search_form"
+	get '/search_form', to: "welcome#search_form", as: "search_form"
 
 	get "/signup", to: "users#new", as: "new_user"
 	# #sign in user page
@@ -17,20 +17,26 @@ Rails.application.routes.draw do
 
 	post "/logout" => "sessions#destroy"
 
-  get "/aboutus", to: "layouts#aboutus", as: "aboutus"
+	post "/senddata", to: "gifts#receivedata"
 
-
-  resources :users do 
-
-    resources :recipients do
-      resources :gifts
-    end
-  end    
+	resources :users do
+		resources :recipents do 
+			resources :gifts 
+		end
+	end
 
 end
-#  new_user GET    /signup(.:format)                                               users#new
+
+
+#                  Prefix Verb   URI Pattern                                                     Controller#Action
+#                    root GET    /                                                               welcome#index
+#                 aboutus GET    /aboutus(.:format)                                              layouts#aboutus
+#                  search GET    /search(.:format)                                               welcome#search
+#             search_form GET    /search_form(.:format)                                          welcome#search_form
+#                new_user GET    /signup(.:format)                                               users#new
 #                   login GET    /login(.:format)                                                sessions#new
 #                sessions POST   /sessions(.:format)                                             sessions#create
+#                  logout POST   /logout(.:format)                                               sessions#destroy
 #     user_recipent_gifts GET    /users/:user_id/recipents/:recipent_id/gifts(.:format)          gifts#index
 #                         POST   /users/:user_id/recipents/:recipent_id/gifts(.:format)          gifts#create
 #  new_user_recipent_gift GET    /users/:user_id/recipents/:recipent_id/gifts/new(.:format)      gifts#new
@@ -55,13 +61,7 @@ end
 #                         PATCH  /users/:id(.:format)                                            users#update
 #                         PUT    /users/:id(.:format)                                            users#update
 #                         DELETE /users/:id(.:format)                                            users#destroy
-#                   gifts GET    /gifts(.:format)                                                gifts#index
-#                         POST   /gifts(.:format)                                                gifts#create
-#                new_gift GET    /gifts/new(.:format)                                            gifts#new
-#               edit_gift GET    /gifts/:id/edit(.:format)                                       gifts#edit
-#                    gift GET    /gifts/:id(.:format)                                            gifts#show
-#                         PATCH  /gifts/:id(.:format)                                            gifts#update
-#                         PUT    /gifts/:id(.:format)                                            gifts#update
-#                         DELETE /gifts/:id(.:format)                                            gifts#destroy
+
+
 
 

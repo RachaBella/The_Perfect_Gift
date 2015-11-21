@@ -4,12 +4,18 @@ class WelcomeController < ApplicationController
 		render :index
 		
 	end
+
 	def search_form
 		@recipient= Recipient.new
-		@current_user = current_user
-		@recipients= @current_user.recipients
-		render :search_form
+		if @current_user = current_user
+			@recipients= @current_user.recipients
+			render :search_form
+		else  
+			flash[:notice] = "Please log in to search"
+			redirect_to root_path
+		end
 	end
+
 	def search
 		@current_user = current_user
 		@recipient= Recipient.new
@@ -18,8 +24,14 @@ class WelcomeController < ApplicationController
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
 		@recipientChosen = Recipient.find(params[:user]["recipient_id"]).name
+		@recipient_id= params[:user]["recipient_id"]
 		@occasionChosen  = params[:occasion]
 		var = params[:keyword]
+		puts "keyword is !#{params[:keyword] }!"
+		if var.nil? || var.empty?
+			flash[:notice] = "Please enter something into the search field"
+			redirect_to search_form_path and return
+		end
 		@keywords = var.split(/\W+/)
 		res = []
 		@finalResponse = []
@@ -28,7 +40,7 @@ class WelcomeController < ApplicationController
 		# Prosperent - good!
 		@keywords.each do |key|
 			url = "http://api.prosperent.com/api/search?api_key=" + APP_CONFIG['PROS_API_KEY']
-			url2 = "&query=" + key
+			url2 = "&query=" + key + "&limit=25"
 			res << HTTParty.get(url + url2)
 		end
 

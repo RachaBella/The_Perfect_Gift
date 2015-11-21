@@ -1,4 +1,3 @@
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,6 +11,7 @@
  * file per style scope.
  *
 
+
  
  *= require_tree .
  *= require bootstrap-3.2.0.min
@@ -20,11 +20,14 @@
  *= require style.css
  *= require welcome.css  
  *= require materialize 
- *= require_self
  *= require bootstrap-material-design
  *= require bootstrap-3.2.0.min
- *= require material-fullpalette.min
-
+ *= require bootstrap-material-design
+ *= require material-fullpalette.min 
+ *= require_self
  */
  @import "bootstrap-sprockets"
+
+
+
 
