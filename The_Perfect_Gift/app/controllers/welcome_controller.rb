@@ -23,14 +23,20 @@ class WelcomeController < ApplicationController
 		@recipients =  @current_user.recipients
 		# Walmart - mediorce
 		#url = 'http://api.walmartlabs.com/v1/search?query='
-		@recipientChosen = Recipient.find(params[:user]["recipient_id"]).name
+		if params[:user]["recipient_id"] ==""
+			flash[:notice] = "Please chose the recipient for the gift"
+			redirect_to search_form_path and return
+		else
+			@recipientChosen = Recipient.find(params[:user]["recipient_id"])
+		end
+	
 		@recipient_id= params[:user]["recipient_id"]
 		@occasionChosen  = params[:occasion]
 		var = params[:keyword]
 		puts "keyword is !#{params[:keyword] }!"
-		if var.nil? || var.empty?
+		if var.nil? || var.empty? 
 			flash[:notice] = "Please enter something into the search field"
-			redirect_to search_form_path and return
+			redirect_to search_form_path and return			
 		end
 		@keywords = var.split(/\W+/)
 		res = []
