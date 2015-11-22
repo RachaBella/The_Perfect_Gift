@@ -53,7 +53,7 @@ input#user_username, input#user_email, input#user_password, #signin-input{
 
 /* Background image for front page */
 html body { 
-    /* background: url("boxes.png") no-repeat center; */
+    background: url("boxes.png") no-repeat center;
     background-position: 50% 200px;
     background-color: lightblue;
     background-size: contain;
@@ -86,14 +86,21 @@ html body {
 
 
 /* Cards for text on pages */
-.card-autosize {
-    width: auto;
-    padding: .25em;
+.card-general {
+    padding-top: .25em;
+    padding-right: .25em;
+    padding-bottom: .25em;
+    padding-left: 1em;
+    margin: 100px;
+}
+.card-title {
+    max-width: 800px;
+}
+.card-names {
+    max-width: 150px;
 }
 
 /* Styling from Chris */
-
-
 .welcome-button {
     height: 40px; 
     width: 100px;
