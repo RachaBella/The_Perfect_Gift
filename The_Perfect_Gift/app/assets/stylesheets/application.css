@@ -10,18 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap-3.2.0.min
- *= require bootstrap-material-design
- *= require material-fullpalette.min
+
+
+ 
  *= require_tree .
  *= require style.css
- *= require welcome.css 
- *= bootstrap-sprockets 
- *= materialize 
+ *= require materialize
+ *= require bootstrap-3.2.0.min
+ *= require materialize
+ *= require bootstrap-material-design
+ *= require material-fullpalette.min 
+ *= require wallop
+ *= require wallop--fold
+ *= require welcome
  *= require_self
  */
+ @import "bootstrap-sprockets"
 
-@import "bootstrap-sprockets";
-@import "materialize";
+
 
 

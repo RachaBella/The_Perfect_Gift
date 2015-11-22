@@ -1,10 +1,10 @@
+
 /* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
    list-style:none;
 
 }
-
 .carousel-indicators li {
     display: inline-block;
     width: 48px;
@@ -24,38 +24,66 @@
     background-color: #ffff99;
 }
 
-/* Sign In */
+
+/* Sign In formatting*/
 #sign-in {
     color: white;
     font-size: 60px;
 }
-
 input#user_username, input#user_email, input#user_password, #signin-input{
     padding: 7px;
     border: solid 5px #0288D1;
+    background-color: white;
     margin: 2px;
     color: black;
+    font-size: 18px;
     width: 375px;
 }
+
 
 /* Welcome page*/
 #user-welcome {
     color: white;
-    font-size: 70px;
+    font-size: 80px;
 }
 
-.white-text {
-    color:white;
+.gray-text {
+    color:gray;
 }
 
 /* Background image for front page */
-body { 
-    background-color: darkblue;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+html body { 
+    /* background: url("boxes.png") no-repeat center; */
+    background-position: 50% 200px;
+    background-color: lightblue;
+    background-size: contain;
 }
+
+.welcome-button {
+    height: 40px; 
+    width: 100px;
+
+}
+#splash {
+    color:white;
+    text-decoration: none;
+} 
+.tag-line {
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:100px;
+}
+.tag-line h1 {
+    font-size: 80px;
+    color: white;
+}
+.btn-lg {
+    width: 250px; 
+    height:50px;
+}
+
+
+
 
 /* Cards for text on pages */
 .card-autosize {
@@ -63,3 +91,116 @@ body {
     padding: .25em;
 }
 
+/* Styling from Chris */
+
+
+.welcome-button {
+    height: 40px; 
+    width: 100px;
+
+}
+
+#splash {
+    color:white;
+    text-decoration: none;
+} 
+
+.welcome-bg{
+    position: absolute; height: 100%; width: 100%;
+    background-size: contain;
+    background-size: 100% 100%;
+}
+
+.tag-line {
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:100px;
+}
+
+.tag-line h1 {
+    font-size: 80px;
+    color: white;
+}
+
+.btn-lg {
+    width: 250px; 
+    height:50px;
+}
+
+.row {
+  width: 100% !important;
+  height:auto;
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+.custom-dropdown select{
+  background-color: #1abc9c;
+  color: #fff !important;
+  font-size: inherit !important;
+  padding: .5em !important;
+  padding-right: 2.5em !important; 
+  border: 0 !important;
+  margin: 0 !important;
+  border-radius: 3px !important;
+  text-indent: 0.01px !important;
+  text-overflow: '' !important;
+  -webkit-appearance: button !important; /* hide default arrow in chrome OSX */
+}
+.custom-dropdown::before {
+  content: "" !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+.custom-dropdown::after {
+  content: "" !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC" !important;
+  height: 1em !important;
+  font-size: .625em !important;
+  line-height: 1 !important;
+  right: 1.2em !important;
+  top: 50% !important;
+  margin-top: -.5em !important;
+}
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  border-radius: 0 3px 3px 0 !important;
+}
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.3) !important;
+}
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1) !important;
+}
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15) !important;
+}
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4) !important;
+}
+
+hr {
+  width: 100%
+}
+
+p#price {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+p#keyword {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
+
+}

@@ -1,2 +1,21 @@
 <%= render partial: "/layouts/navbar" %>
 
+
+The user is :
+<%= @user.username %>
+The recipient is : 
+<%= @recipient.name%>
+
+The gifts Id are :
+<%@recipient_gifts.each do |gift|%>
+ 		<%=gift.gift_id%>
+<%end%>
+
+
+The table occasion /gift_id
+<% @occasions_gifts.each do |og| %>
+ <%=og.occasion  %>
+  <%=og.gift_id %>
+  <%=og.recipient_id %>
+<%end%>
+
