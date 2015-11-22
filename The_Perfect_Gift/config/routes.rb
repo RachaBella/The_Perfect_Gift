@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
 	post "/senddata", to: "gifts#receivedata"
 
+	# get "/users/:user_id/recipients/gifts", to:"gifts#index", as: "user_recipients_gifts"
+
 	resources :users do
 		resources :recipients do 
 			resources :gifts 
