@@ -1,23 +1,4 @@
 <%= render partial: "/layouts/navbar" %>
 
-<div>
-	The user is :
-<%= @user.user_name %>
-The recipient is : 
-<%= @recipient.name%>
-</div>
 
-
-The gifts Id are :
-<%@recipient_gifts.each do |gift|%>
- 		<%=gift.gift_id%>
-<%end%>
-
-
-The table occasion /gift_id
-<% @occasions_gifts.each do |og| %>
- <%=og.occasion  %>
-  <%=og.gift_id %>
-  <%=og.recipient_id %>
-<%end%>
 
