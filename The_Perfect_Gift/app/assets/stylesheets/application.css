@@ -17,13 +17,10 @@
  *= require bootstrap-3.2.0.min
  *= require materialize
  *= require bootstrap-material-design
- *= require style.css
- *= require welcome.css  
- *= require materialize 
- *= require bootstrap-material-design
- *= require bootstrap-3.2.0.min
- *= require bootstrap-material-design
  *= require material-fullpalette.min 
+ *= require wallop
+ *= require wallop--fold
+ *= require welcome
  *= require_self
  */
  @import "bootstrap-sprockets"
