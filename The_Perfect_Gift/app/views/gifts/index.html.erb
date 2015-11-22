@@ -3,19 +3,23 @@
 
 The user is :
 <%= @user.username %>
+<br>
 The recipient is : 
 <%= @recipient.name%>
-
+<br>
 The gifts Id are :
 <%@recipient_gifts.each do |gift|%>
- 		<%=gift.gift_id%>
+ 		<%=Gift.find(1).name%>
+ 		<br>
 <%end%>
-
-
-The table occasion /gift_id
+<br>
+The table occasion /gift_id : <br>
 <% @occasions_gifts.each do |og| %>
- <%=og.occasion  %>
-  <%=og.gift_id %>
-  <%=og.recipient_id %>
+ The occasion is <%=og.occasion  %>
+ <br>
+ Has the gifts name :  <%= Gift.find(og.gift_id).name%>
+  <br>
+ for the recipient <%=og.recipient_id %>
+ <br>
 <%end%>
 
