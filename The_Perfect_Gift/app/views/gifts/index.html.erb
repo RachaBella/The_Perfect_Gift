@@ -1,4 +1,37 @@
 <%= render partial: "/layouts/navbar" %>
 
+ The user is :
+<%= @user.username %>
+<br>
+The recipient is : 
+
+	<%= @recipient.name%>
+
+
+
+The table occasion /gift_id
+<% @occasions_gifts.each do |og| %>
+ <%=og.occasion  %>
+  <%=og.gift_id %>
+   <%=og.recipient_id %>
+<%end%> 
+
+<hr>
+  <%@recipient_gifts.each do |gift|%>
+  <div class="col-xs-12 col-sm-6 col-md-4 text:center"> 
+    <div class="thumbnail">
+      <img src="<%=Gift.find(gift.gift_id).imageUrl%>">
+      <div class="caption">
+        <h5><%=Gift.find(gift.gift_id).name%></h5>
+        <p>$<%=Gift.find(gift.gift_id).price%></p>
+      	<p><%=Gift.find(gift.gift_id).description%></p>
+        <p><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-primary"role="button">Buy Now</a></p>
+		
+      </div>
+    </div>
+  </div>
+
+	<%end %>
+
 
 
