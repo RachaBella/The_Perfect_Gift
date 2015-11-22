@@ -22,7 +22,7 @@
 
       
     <% if @current_user %>
-    			<li><%= link_to "LOG OUT", logout_path, method: :destroy %></li>
+    			<li><%= link_to "LOG OUT", logout_path, method: :destroy, id: @current_user.id, class: "user_id" %></li>
     <% else %>
 
       <li class = "active"><%= link_to "SIGN UP", new_user_path(@current_user) %></li>
