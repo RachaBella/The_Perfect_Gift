@@ -1,10 +1,12 @@
 <%= render partial: "/layouts/navbar" %>
 
-
-The user is :
-<%= @user.username %>
+<div>
+	The user is :
+<%= @user.user_name %>
 The recipient is : 
 <%= @recipient.name%>
+</div>
+
 
 The gifts Id are :
 <%@recipient_gifts.each do |gift|%>
