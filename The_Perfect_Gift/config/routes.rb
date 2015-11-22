@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
 	post "/logout" => "sessions#destroy"
 
-	post "/senddata", to: "gifts#receivedata"
+	get "/users/:user_id/recipients/gifts", to:"gifts#index", as: "user_recipients_gifts"
 
 	# get "/users/:user_id/recipients/gifts", to:"gifts#index", as: "user_recipients_gifts"
 

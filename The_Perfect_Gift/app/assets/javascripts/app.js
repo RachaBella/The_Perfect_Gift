@@ -16,9 +16,15 @@ function loadFunctions()
 
 	$('#addRecipient').on('click', function () {
 		$('#recipient-form').slideUp(350);
-		/*$.post('/users/:id/recipients', $('.recipientForm').serialize(), function (response) {
+		var id = $(".recipient-show").attr('id')
+		var select = document.getElementById("user_recipient_id");
+		console.log("the id of the user is :", id)
+		$.get('/users/'+ id +'/recipients', function (response) {
+			console.log('the response is', response.recipients)
+			//select.options[select.options.length] = new Option(response.recipients[response.recipients.length -1].name, response.recipients[response.recipients.length -1].id);
 
-		});*/
+		});
+		
 	});
 
 	$('#cancelButton').on('click', function () {
@@ -32,25 +38,24 @@ function loadFunctions()
 		if ($('#user_recipient_id').val() != "") {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
-				 imageUrl: $('li.active p#img').text(),
-				 url: $('li.active p#url').text(),
-				 keyword: $('li.active p#keyword').text(),
-				 price: $('li.active p#price').text(),
-				 description: $('li.active p#description').text(),
+				 imageUrl: $('.Wallop-item--current p#img').text(),
+				 url: $('.Wallop-item--current p#url').text(),
+				 keyword: $('.Wallop-item--current p#keyword').text(),
+				 price: $('.Wallop-item--current p#price').text(),
+				 description: $('.Wallop-item--current p#description').text(),
 				 recipient_id: $('#user_recipient_id').val(),
 				 occasion: $("#occasion").val()
 			}
 		} else {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
-				 imageUrl: $('li.active p#img').text(),
-				 url: $('li.active p#url').text(),
-				 keyword: $('li.active p#keyword').text(),
-				 price: $('li.active p#price').text(),
-				 description: $('li.active p#description').text(),
-				 recipient_id: $('#user_recipient_id').val(),
+				 imageUrl: $('.Wallop-item--current p#img').text(),
+				 url: $('.Wallop-item--current p#url').text(),
+				 keyword: $('.Wallop-item--current p#keyword').text(),
+				 price: $('.Wallop-item--current p#price').text(),
+				 description: $('.Wallop-item--current p#description').text(),
+				 recipient_id: $('.recipient_id').attr('id'),
 				 occasion: $("#occasion").val()
-
 		}
 
 		}

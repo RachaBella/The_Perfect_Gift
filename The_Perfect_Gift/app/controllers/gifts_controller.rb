@@ -5,10 +5,12 @@ class GiftsController < ApplicationController
 		@user = User.find(params[:user_id])
 		@recipients = @user.recipients 
 		@recipient = Recipient.find(params[:recipient_id])
-		
 		@recipient_gifts = RecipientGift.where("recipient_id= ?" , @recipient.id)
 		@occasions_gifts = RecipientGift.select("occasion, gift_id, recipient_id").where("recipient_id= ?" , @recipient.id).group("occasion , gift_id, recipient_id")
 		p @occasions_gifts
+
+
+
 	end
 
 	def create
