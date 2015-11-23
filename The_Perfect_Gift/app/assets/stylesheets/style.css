@@ -1,9 +1,4 @@
-a#addButton {
-  z-index: 2;
-}
-i.material-icons {
-  z-index: 1;
-}
+
 /* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
@@ -87,10 +82,8 @@ h5.occasion {
 }
 /* Background image for front page */
 html body { 
-    background: url("boxes.png") no-repeat center;
-    background-position: 50% 200px;
-    background-color: lightblue;
-    background-size: contain;
+    background: url("tpg-4.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .welcome-button {
@@ -102,14 +95,13 @@ html body {
     color:white;
     text-decoration: none;
 } 
-.tag-line {
+h1.tag-line {
     text-align: center;
-    margin-top:200px;
-    margin-bottom:100px;
-}
-.tag-line h1 {
+    margin-top:50px;
+    margin-bottom:80px;
     font-size: 80px;
     color: white;
+    text-shadow: 3px 3px black;
 }
 .btn-lg {
     width: 250px; 
