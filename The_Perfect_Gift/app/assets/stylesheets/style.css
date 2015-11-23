@@ -50,7 +50,9 @@ input#user_username, input#user_email, input#user_password, #signin-input{
 .gray-text {
     color:gray;
 }
-
+.white-text {
+    color:white;
+}
 /* Background image for front page */
 html body { 
     background: url("boxes.png") no-repeat center;
@@ -141,7 +143,8 @@ html body {
 .custom-dropdown {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  height: auto;
   margin: 10px; /* demo only */
 }
 .custom-dropdown select{
@@ -152,6 +155,8 @@ html body {
   padding-right: 2.5em !important; 
   border: 0 !important;
   margin: 0 !important;
+  line-height: 10px;
+  height: 45px;
   border-radius: 3px !important;
   text-indent: 0.01px !important;
   text-overflow: '' !important;
@@ -211,3 +216,11 @@ p#keyword {
   font-size: 16px;
 
 }
+
+input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#keyword.addRecipientDropdown {
+  font-size: 16px;
+  color:black;
+  background-color: white;
+}
+
+
