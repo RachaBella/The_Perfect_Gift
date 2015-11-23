@@ -18,20 +18,25 @@ function loadFunctions()
 		$('#recipient-form').slideUp(350);
 		var id = $(".recipient-show").attr('id')
 		var select = document.getElementById("user_recipient_id");
+		var data = {
+			name: $('input#first_name').val(),
+			email:$('input#email').val()
+		}
+		console.log("the data is", data)
 		console.log("the id of the user is :", id)
-		$.get('/users/'+ id +'/recipients', function (response) {
-			console.log('the response is', response.recipients)
-			//select.options[select.options.length] = new Option(response.recipients[response.recipients.length -1].name, response.recipients[response.recipients.length -1].id);
-
-		});
-		
+		$.ajax({
+			type: 'POST',
+			url: '/users/'+ id +'/recipients',
+			datatype: 'json',
+			data: data
+		}).done( function(response) {
+			console.log('the response from adding a new recipient is', response.recipient);
+			select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+		});		
 	});
 
 	$('#cancelButton').on('click', function () {
 		$('#recipient-form').slideUp(350);
-		/*$.post('/users/:id/recipients', $('.recipientForm').serialize(), function (response) {
-
-		});*/
 	});
 
 	$('#addGift').on('click', function () {

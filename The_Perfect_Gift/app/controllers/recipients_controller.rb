@@ -3,11 +3,6 @@ class RecipientsController < ApplicationController
 	def index
 		@recipients = User.find(params[:user_id]).recipients
 		p @recipients
-		if request.xhr?
-        render :json => {
-                            :recipients => @recipients
-                        }
-     end
 	end
 
 	def new
@@ -17,14 +12,16 @@ class RecipientsController < ApplicationController
 	def create
 		p params
 		@current_user = current_user
-		@recipient = Recipient.create(params.require(:recipient).permit(:name, :email))
+		@recipient = Recipient.create(:name => params["name"], :email => params["email"])
 		if @recipient.save
 			p  "saved"
 			@current_user.recipients << @recipient
 			@recipients = @current_user.recipients
+			if request.xhr?
 			render :json => {
-                            :recipients => @recipients
+                            :recipient => @recipient
                         }
+            end
 		else
 			redirect_to root_path
 		end
