@@ -36,7 +36,7 @@
   font-weight: bold;
 }
 
-input#user_username, input#user_email, input#user_password, #signin-input{
+input#user_username, input#user_email, input#user_password, input#signin-input {
     padding: 7px;
     border: solid 5px #0288D1;
     background-color: white;
@@ -58,7 +58,14 @@ h5.occasion {
   padding-left: 8px;
 }
 
+.aboutus {
+  padding: 8px;
+  margin: 2em;
+}
 
+.center {
+  text-align: center;
+}
 
 #buy-now {
   padding-top: 0px;
@@ -183,7 +190,7 @@ html body {
   padding-right: 2.5em !important; 
   border: 0 !important;
   margin: 0 !important;
-  line-height: 10px;
+  line-height: 9px;
   height: 45px;
   border-radius: 3px !important;
   text-indent: 0.01px !important;
