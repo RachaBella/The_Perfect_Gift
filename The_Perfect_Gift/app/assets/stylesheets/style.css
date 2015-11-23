@@ -223,6 +223,4 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
   background-color: white;
 }
 
-#showDropdown, #occcassion.showDropdown {
-  height: 30px;
-}
+
