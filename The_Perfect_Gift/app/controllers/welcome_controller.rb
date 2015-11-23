@@ -42,10 +42,8 @@ class WelcomeController < ApplicationController
 		res = []
 		@finalResponse = []
 		varHash = Hash.new 
-		#restUrl = @searchword +'&format=json&apiKey='+ APP_CONFIG['WAL_API_KEY']
-		# Prosperent - good!
 		@keywords.each do |key|
-			url = "http://api.prosperent.com/api/search?api_key=" + APP_CONFIG['PROS_API_KEY']
+			url = "http://api.prosperent.com/api/search?api_key=" + ENV['PROS_API_KEY']
 			url2 = "&query=" + key + "&limit=25"
 			res << HTTParty.get(url + url2)
 		end
