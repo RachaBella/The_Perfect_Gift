@@ -245,7 +245,7 @@ p#keyword {
   font-size: 16px;
 
 }
-<<<<<<< HEAD
+
 
 input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#keyword.addRecipientDropdown {
   font-size: 16px;
@@ -253,6 +253,3 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
   background-color: white;
 }
 
-
-=======
->>>>>>> e1e19b69eec647c20d6b9fe87acbe57001478ccb
