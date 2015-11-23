@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
   def show
      @current_user = current_user
+     @recipient = Recipient.new
      @user = User.friendly.find(params[:id])
      @recipients= @user.recipients
     

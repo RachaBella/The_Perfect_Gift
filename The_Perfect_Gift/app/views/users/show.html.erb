@@ -31,15 +31,14 @@
 		<%= select_tag(:occasion, options_for_select([['Birthday',1],['Wedding',2],['Christmas',3],['Thanksgiving',4],['New year',5]]), {:class =>"form-control"}) %>
 	</div>
 
-	<div class="col s12" style="display:none" id='recipient-form' >
-
+	<div class="col s12" style="display:none" id='recipient-form'>
 		<%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
 		<div class="row">
 			<div class="input-field col s6">
 				<%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"validate" %>
 			</div>
-
 		</div>
+
 		<div class="row">
 			<div class="input-field col s12">
 				<%= f.text_field :email, placeholder: "Recipient email", :id => "email" %>
@@ -47,13 +46,19 @@
 		</div>
 
 		<button id="addRecipient" class="btn btn-info btn-raised">Add recipient</button> 
-		<button id="cancelButton" class="btn btn-info btn-raised">Cancel</button>  
+		<button id="cancelButton" class="btn btn-info btn-raised">Cancel</button> 
+
 		<%end%>
 	</div>
 
 </div>
 </div>
-<% @recipients.each do |recipient|%>
-	<%= link_to "#{recipient.name}", "/users/#{@user.id}/recipients/#{recipient.id}/gifts" %>
+<div class= "recipientList recipient-show" id="<%=@current_user.id%>">
+<%if @recipients.count !=0 %>
+	<% @recipients.each do |recipient|%>
+	<%= link_to "#{recipient.name}", "/users/#{@user.id}/recipients/#{recipient.id}/gifts"%>
+		
 <% end %>
+<%end%>
+</div>
   

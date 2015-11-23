@@ -31,7 +31,13 @@ function loadFunctions()
 			data: data
 		}).done( function(response) {
 			console.log('the response from adding a new recipient is', response.recipient);
-			select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+			if (select != null) {
+				select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+	
+			} else {
+				$('.recipientList').append("<a href='/users/"+id+"/recipients/"+response.recipient.id+"/gifts'>"+response.recipient.name+"</a>")
+			}
+			
 		});		
 	});
 
@@ -43,7 +49,7 @@ function loadFunctions()
 		if ($('#user_recipient_id').val() != "") {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
-				 imageUrl: $('.Wallop-item--current p#img').text(),
+				 imageUrl: $('.Wallop-item--current img').attr('src'),
 				 url: $('.Wallop-item--current p#url').text(),
 				 keyword: $('.Wallop-item--current p#keyword').text(),
 				 price: $('.Wallop-item--current p#price').text(),
@@ -54,7 +60,7 @@ function loadFunctions()
 		} else {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
-				 imageUrl: $('.Wallop-item--current p#img').text(),
+				 imageUrl: $('.Wallop-item--current img').attr('src'),
 				 url: $('.Wallop-item--current p#url').text(),
 				 keyword: $('.Wallop-item--current p#keyword').text(),
 				 price: $('.Wallop-item--current p#price').text(),

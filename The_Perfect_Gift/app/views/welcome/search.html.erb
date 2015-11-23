@@ -47,10 +47,7 @@ The chosen occasion :
                   <% @finalResponse.drop(1).each do |res|%>
                   <div class="Wallop-item" align="center">
                     <img src="<%= res[:image_url] %>">
-                    <hr>
-
-                    <p style='display:none' id="img"><%= res[:image_url] %></p>
-                  
+                    <hr>  
                         <p  id="keyword"><%= res[:keyword] %></p>
                    
                           <p style='display:none' id="url"><%= res[:affiliate_url] %></p>
