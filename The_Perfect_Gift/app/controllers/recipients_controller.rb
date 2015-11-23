@@ -1,7 +1,8 @@
 class RecipientsController < ApplicationController
 	
 	def index
-		
+		@recipients = User.find(params[:user_id]).recipients
+		p @recipients
 	end
 
 	def new
@@ -11,11 +12,16 @@ class RecipientsController < ApplicationController
 	def create
 		p params
 		@current_user = current_user
-		@recipient = Recipient.create(params.require(:recipient).permit(:name, :email))
+		@recipient = Recipient.create(:name => params["name"], :email => params["email"])
 		if @recipient.save
-			p  "sqved"
+			p  "saved"
 			@current_user.recipients << @recipient
-			redirect_to root_path
+			@recipients = @current_user.recipients
+			if request.xhr?
+			render :json => {
+                            :recipient => @recipient
+                        }
+            end
 		else
 			redirect_to root_path
 		end

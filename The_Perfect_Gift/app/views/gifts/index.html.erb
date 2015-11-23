@@ -1,21 +1,58 @@
 <%= render partial: "/layouts/navbar" %>
+	
 
 
 The user is :
 <%= @user.username %>
+<br>
 The recipient is : 
 <%= @recipient.name%>
-
+<br>
 The gifts Id are :
 <%@recipient_gifts.each do |gift|%>
- 		<%=gift.gift_id%>
+ 		<%=gift.occasion%>
+ 		<br>
 <%end%>
-
-
-The table occasion /gift_id
+<br>
+The table occasion /gift_id : <br>
 <% @occasions_gifts.each do |og| %>
- <%=og.occasion  %>
-  <%=og.gift_id %>
-  <%=og.recipient_id %>
+ The occasion is <%=og.occasion  %>
+ <br>
+ Has the gifts name :  <%= Gift.find(og.gift_id).name%>
+  <br>
+ for the recipient <%=og.recipient_id %>
+ <br>
 <%end%>
+
+
+	<div class = "recipient-name" align="center">
+		<h2> Gifts for <%= @recipient.name%> <h2>
+	</div>
+
+
+  <%@recipient_gifts.each do |gift|%>
+  <div class="col-xs-12 col-sm-6 col-md-4 text:center"> 
+    <div class="thumbnail">
+      <h5 class = "occasion"><%=gift.occasion%></h5>
+      <img src="<%=Gift.find(gift.gift_id).imageUrl%>">
+      <div class="caption">
+        <h5 id="gift-title"><%=Gift.find(gift.gift_id).name%></h5>
+        <p>$<%=Gift.find(gift.gift_id).price%></p>
+      	<% des = Gift.find(gift.gift_id).description%>
+      	<% des = truncate(des, :length => 200, :separator => ".")%>
+        <p><%= des %></p>
+        <p align="center"><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-primary" role="button" id = 'buy-now'>Buy Now</a></p>
+
+       
+
+
+
+		
+      </div>
+    </div>
+  </div>
+
+	<%end %>
+
+
 
