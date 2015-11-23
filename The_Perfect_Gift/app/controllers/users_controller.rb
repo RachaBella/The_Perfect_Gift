@@ -5,11 +5,13 @@ class UsersController < ApplicationController
 		@users = User.all
 		render :index 
 	end 
+
   def new
     @current_user = current_user
     @user = User.new
     render :new
   end
+
   def create
    user_params = params.require(:user).permit(:username, :email, :password)
    @user = User.create(user_params)
@@ -31,12 +33,14 @@ class UsersController < ApplicationController
       end
      # <-- go to show
   end
+
   def show
      @current_user = current_user
      @recipient = Recipient.new
      @user = User.friendly.find(params[:id])
-     @recipients= @user.recipients
-    
+     @recipients = @user.recipients
+     @recipient = Recipient.new
      render :show
  end
+
 end

@@ -1,6 +1,8 @@
 <%= render partial: "/layouts/navbar" %>
 
 
+
+
 	<div class = "recipient-name" align="center">
 		<h2> Gifts for <%= @recipient.name%> <h2>
 	</div>
@@ -18,8 +20,9 @@
       	<% des = truncate(des, :length => 200, :separator => ".")%>
         <p><%= des %></p>
         <p align="center"><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-primary" role="button" id = 'buy-now'>Buy Now</a></p>
-
+        <%= button_to "Delete Gift", user_recipient_gift_path(@user, @recipient, gift), method: :delete, action: :destroy %> 
        
+
 
 
 
@@ -29,4 +32,3 @@
   </div>
 
 	<%end %>
-

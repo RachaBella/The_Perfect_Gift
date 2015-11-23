@@ -61,6 +61,7 @@ function loadFunctions()
 			var data = {
 				 user_id: $('.user_id').attr('id'),
 				 imageUrl: $('.Wallop-item--current img').attr('src'),
+				 imageUrl: $('.Wallop-item--current img').attr("src"),
 				 url: $('.Wallop-item--current p#url').text(),
 				 keyword: $('.Wallop-item--current p#keyword').text(),
 				 price: $('.Wallop-item--current p#price').text(),
