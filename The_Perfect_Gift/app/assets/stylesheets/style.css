@@ -46,8 +46,8 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     width: 375px;
 }
 
-.home-button {
-  color: black;
+a.home-button, a.home-button:hover, span.home-button {
+  color: white;
   font-size: 35px;
   padding-right: 10px;
   text-decoration: none;
