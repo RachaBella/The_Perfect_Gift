@@ -1,4 +1,9 @@
-
+a#addButton {
+  z-index: 2;
+}
+i.material-icons {
+  z-index: 1;
+}
 /* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
