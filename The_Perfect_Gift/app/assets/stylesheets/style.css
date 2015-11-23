@@ -35,6 +35,7 @@
   font-size: 20px;
   font-weight: bold;
 }
+
 input#user_username, input#user_email, input#user_password, #signin-input{
     padding: 7px;
     border: solid 5px #0288D1;
@@ -187,6 +188,7 @@ html body {
   text-indent: 0.01px !important;
   text-overflow: '' !important;
   -webkit-appearance: button !important; /* hide default arrow in chrome OSX */
+  font-size: 2em;
 }
 .custom-dropdown::before {
   content: "" !important;

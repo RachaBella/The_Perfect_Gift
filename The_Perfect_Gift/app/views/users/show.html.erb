@@ -31,6 +31,7 @@
 
 		<%= select_tag(:occasion, options_for_select([['Birthday',1],['Wedding',2],['Christmas',3],['Thanksgiving',4],['New year',5]]), {:class =>"form-control"}) %>
 	</div>
+
 	<div class="col s12" style="display:none" id='recipient-form' >
 
 		<%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
@@ -51,7 +52,7 @@
 		<%end%>
 
 	</div>
-	
+
 </div>
 </div>
 <% @recipients.each do |recipient|%>
