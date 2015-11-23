@@ -1,7 +1,11 @@
 <%= render partial: "/layouts/navbar" %>
 The chosen recipient :
 
-    <%= @recipientChosen.name %><br>
+
+<p class="recipient_id" id = "<%= @recipientChosen.id %>">
+    <%= @recipientChosen.name %>
+</p>
+
 
 The chosen occasion :
 <%= @occasionChosen%>

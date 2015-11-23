@@ -1,28 +1,6 @@
 <%= render partial: "/layouts/navbar" %>
-	
 
 
-The user is :
-<%= @user.username %>
-<br>
-The recipient is : 
-<%= @recipient.name%>
-<br>
-The gifts Id are :
-<%@recipient_gifts.each do |gift|%>
- 		<%=gift.occasion%>
- 		<br>
-<%end%>
-<br>
-The table occasion /gift_id : <br>
-<% @occasions_gifts.each do |og| %>
- The occasion is <%=og.occasion  %>
- <br>
- Has the gifts name :  <%= Gift.find(og.gift_id).name%>
-  <br>
- for the recipient <%=og.recipient_id %>
- <br>
-<%end%>
 
 
 	<div class = "recipient-name" align="center">
@@ -47,12 +25,10 @@ The table occasion /gift_id : <br>
 
 
 
+
 		
       </div>
     </div>
   </div>
 
 	<%end %>
-
-
-
