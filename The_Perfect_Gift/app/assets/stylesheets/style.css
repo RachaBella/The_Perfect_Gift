@@ -2,6 +2,10 @@
     color: white;
     font-size: 60px;
 }
+#gift-title {
+  font-size: 20px;
+  font-weight: bold;
+}
 
 input#user_username, input#user_email, input#user_password, #signin-input{
     padding: 7px;
@@ -11,6 +15,27 @@ input#user_username, input#user_email, input#user_password, #signin-input{
     width: 375px;
 }
 
+.home-button {
+  color: black;
+  font-size: 35px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+h5.occasion {
+  color: #009688;
+  padding-left: 8px;
+}
+
+
+
+#buy-now {
+  padding-top: 0px;
+  padding-bottom:0px;
+  padding-left:30px;
+  padding-right:30px;
+
+}
 
 #user-welcome {
     color: white;

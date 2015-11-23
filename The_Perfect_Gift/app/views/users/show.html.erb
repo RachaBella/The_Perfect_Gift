@@ -11,7 +11,7 @@
 	<h1 class="white-text" align="center">View your recipients here!</h2>
 	<div class="row">
 		<% if @recipients.count !=0 %>
-		<%= collection_select(:user, :recipient_id , @recipients, :id, :name, {:prompt=>true}, {:class =>"form-control"})%>
+		<%= collection_select(:user, :id , @recipients, :id, :name, {:prompt=>true}, {:class =>"form-control"})%>
 		<% else %>
 		<div class="col-xs-3 col-xs-offset-3" align="center">
 			<br>
@@ -30,6 +30,7 @@
 	<div align="center">
 		<%= select_tag(:occasion, options_for_select([['Birthday',1],['Wedding',2],['Christmas',3],['Thanksgiving',4],['New year',5]]), {:class =>"form-control"}) %>
 	</div>
+
 	<div class="col s12" style="display:none" id='recipient-form' >
 
 		<%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
@@ -49,6 +50,10 @@
 		<button id="cancelButton" class="btn btn-info btn-raised">Cancel</button>  
 		<%end%>
 	</div>
+
 </div>
 </div>
+<% @recipients.each do |recipient|%>
+	<%= link_to "#{recipient.name}", "/users/#{@user.id}/recipients/#{recipient.id}/gifts" %>
+<% end %>
   
