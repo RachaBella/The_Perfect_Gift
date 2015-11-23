@@ -44,11 +44,11 @@
 
 	    		<div class="col l12 col s12">
 				    <p style= "font-weight:bold ">Which occasion ? </p>
-				    <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower']]), {:class =>"form-control"}) %>
+				    <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New Year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower'], ['Hanukah', 'Hanukah'], ['Ramadan', 'Ramadan'], ['Anniversary', 'Anniversary'], ['Other', 'Other']]), {:class =>"form-control"}) %>
     			</div>
 				<div class="col l12 col s12">
 				<br>
-					<p style= "font-weight:bold; font-color: black"> Search for : </p>
+					<p style= "font-weight:bold; font-color: black; font-size: 16px;"> Search for : </p>
 					<%= text_field_tag(:keyword) %>
 					<%= submit_tag("Search") %>	
 				</div>
@@ -61,13 +61,13 @@
 			      <%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
 			            <div class="row">
 			              <div class="input-field col s6">
-			              <%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"validate" %>
+			              <%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"addRecipientDropdown validate" %>
 			              </div>
 			              
 			            </div>
 			            <div class="row">
-			              <div class="input-field col s12">
-			                <%= f.text_field :email, placeholder: "Recipient email", :id => "email" %>
+			              <div class="input-field">
+			                <%= f.text_field :email, placeholder: "Recipient email", :id => "email", :class => "addRecipientDropdown"%>
 			              </div>
 			            </div>
 			            
