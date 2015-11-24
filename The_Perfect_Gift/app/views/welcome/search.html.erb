@@ -1,14 +1,12 @@
 <%= render partial: "/layouts/navbar" %>
 The chosen recipient :
 
-
-<!-- <p class="recipient_id" id = "<%= @recipientChosen.id %>">  --> 
-   <%= @recipientChosen.name %><br>
-<!-- </p> -->
-
+<p class="recipient_id" id = "<%= @recipientChosen.id %>">
+    <%= @recipientChosen.name %>
+</p>
 
 The chosen occasion :
-<%= @occasionChosen %>
+<%= @occasionChosen%>
 <% count=0 %><br>
 
 	
@@ -24,7 +22,7 @@ The chosen occasion :
             </div>
             <div class=" col-xs-12 col-sm-12 col-md-6">
             <span class ="custom-dropdown" id="drop2">
-                <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower'], ['Hanukah','Hanukah'],['Ramadan','Ramadan'],['Anniversary', 'Anniversary'],['Other', 'Other']]), {:id => 'occasion', :style => 'display: inline'}) %>
+                <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower'], ['Hanukah','Hanukah'],['Ramadan','Ramadan'],['Anniversary', 'Anniversary']]), {:id => 'occasion', :style => 'display: inline'}) %>
             </span>
             </div>
         <br>   
@@ -49,10 +47,7 @@ The chosen occasion :
                   <% @finalResponse.drop(1).each do |res|%>
                   <div class="Wallop-item" align="center">
                     <img src="<%= res[:image_url] %>">
-                    <hr>
-
-                    <p style='display:none' id="img"><%= res[:image_url] %></p>
-                  
+                    <hr>  
                         <p  id="keyword"><%= res[:keyword] %></p>
                    
                           <p style='display:none' id="url"><%= res[:affiliate_url] %></p>

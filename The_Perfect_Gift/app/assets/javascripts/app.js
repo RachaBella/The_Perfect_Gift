@@ -2,12 +2,11 @@ var background = ["#aa00ff", "#d81b60","#ff1744","#1e88e5","#3949ab","#00bcd4","
 
 $(document).ready( function() {
 	loadFunctions()
-
 });
 
 function loadFunctions()
 {
-	$('#addButton').on('click', function () {
+	$('a#addButton').on('click', function () {
 		$('#recipient-form').slideDown(350);
 		$('html, body').animate({
         scrollTop: $("#recipient-form").offset().top
@@ -31,7 +30,13 @@ function loadFunctions()
 			data: data
 		}).done( function(response) {
 			console.log('the response from adding a new recipient is', response.recipient);
-			select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+			if (select != null) {
+				select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+			} else {
+				$('.recipientList').append("<a href='/users/"+id+"/recipients/"+response.recipient.id+"/gifts'>"+response.recipient.name+"</a>")
+				$('#noRecipient').remove();
+			}
+			
 		});		
 	});
 
@@ -43,7 +48,7 @@ function loadFunctions()
 		if ($('#user_recipient_id').val() != "") {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
-				 imageUrl: $('.Wallop-item--current img').attr("src"),
+				 imageUrl: $('.Wallop-item--current img').attr('src'),
 				 url: $('.Wallop-item--current p#url').text(),
 				 keyword: $('.Wallop-item--current p#keyword').text(),
 				 price: $('.Wallop-item--current p#price').text(),
@@ -54,6 +59,7 @@ function loadFunctions()
 		} else {
 			var data = {
 				 user_id: $('.user_id').attr('id'),
+				 imageUrl: $('.Wallop-item--current img').attr('src'),
 				 imageUrl: $('.Wallop-item--current img').attr("src"),
 				 url: $('.Wallop-item--current p#url').text(),
 				 keyword: $('.Wallop-item--current p#keyword').text(),
@@ -94,8 +100,7 @@ function loadFunctions()
     	$("#addGift").css('background-color',background[j])
 
     	
-    })
-
+    });
 
 
 

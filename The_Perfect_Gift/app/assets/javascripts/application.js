@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require materialize
+//= require bootstrap.min
 //= require app
 //= require Wallop
 //= require Wallop.min
-//= require materialize
-//= require bootstrap.min
 //= require turbolinks
 //= require_tree .
 
