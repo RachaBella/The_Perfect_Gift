@@ -13,23 +13,21 @@
 			<%= form_tag("/search", method: "get") do %>
 			<p style="font-weight:bold"> Choose for who:</p>
 				<div class="col l6 col s12">
-				    <% if @recipients.count !=0 %>
-				    <div class ="col l6 col s12 recipient-show" id="<%=@current_user.id%>">
-
+					<div class ="col l6 col s12 recipient-show" id="<%=@current_user.id%>">
+				   		<% if @recipients.count !=0 %>
 				    	<%= collection_select(:user, :recipient_id , @recipients, :id, :name, {:prompt=>true}, {:class =>"form-control"})%>
 				    </div>
+				    <br>
+				    <br>
 				    <div class='col l6 col s12'>
-
 				    <p style="font-weight:bold"> Or add a new one</p>
 					    	<a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
 				            <i class="material-icons">+</i>
 				           	</a>
 				    </div>
-				    
-
 				    <% else %>
 				    <div class="col-xs-12 col-lg-4 recipient-show" id="<%=@current_user.id%>">
-				    	<div class='col l6 col s12'>
+				    	<div class='col l6 col s12' id='noRecipient'>
 				    		<br>
 				    		<p style="font-weight:bold" >You have no recipients yet, create a new one</p>
 				    	</div>
