@@ -9,29 +9,27 @@ p.aboutus {
 }
 ul.nav.nav-tabs {
   background-color: #1565c0;
-}
-
-li#abouttab {
-  padding: 10px 0px;
-  border-right: 1px solid black;
   border-left: 1px solid black;
   border-top: 1px solid black;
-  
+  border-right: 1px solid black;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+li#abouttab {
+  padding: 10px 0px;
+  border-right: 1px solid black; 
 }
 li#teamtab {
   padding: 10px 0px;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  border-radius: 10px;
 }
-
 div#about {
   background-color: white;
   opacity: .8;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 div#team {
   background-color: white;
@@ -39,7 +37,8 @@ div#team {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
