@@ -6,10 +6,19 @@ h3.aboutus.center {
 }
 p.aboutus {
   margin-top: 10px;
+  font-family: "Century Gothic";
   line-height:1.2;
+  font-size: 23px
 }
 ul.nav.nav-tabs {
   background-color: #1565c0;
+}
+
+#team p{
+   font-family: "Century Gothic";
+   line-height:1.2;
+  font-size: 23px;
+  text-align: center
 }
 
 li#abouttab {
