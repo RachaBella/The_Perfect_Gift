@@ -1,36 +1,29 @@
-<div class = "welcome-bg">
-
 
 <%= render partial: "/layouts/navbar" %>
-
-
+<div class="container">
+	
   <% if flash[:notice] %>
 	<div class="alert alert-dismissible alert-success">
   		<button type="button" class="close" data-dismiss="alert">×</button>
   	<%= flash[:notice] %>
 	</div>
   <% end %> 
-
-	<div class = "tag-line"> 
-		<h1> Find the perfect gift for anyone. </h1>
-	</div>
+ 
+<h1 class = "tag-line"> Find the perfect gift for anyone. </h1>
 
 <div class="row">
-	<div class ="col-md-4" align ="center">
+
+	<div class ="col-md-4 col-md-offset-2" align ="center">
 		<p><button class="btn btn-primary btn-lg btn-material-blue-800">
 		<%=link_to "Sign Up", new_user_path, :id => "splash" %></button></p>
 	</div>
 
 	<div class ="col-md-4" align ="center">
-	<p><button class="btn btn-primary btn-lg btn-material-blue">
+	<p><button class="btn btn-primary btn-lg btn-material-blue-800">
 		<%=link_to "Login", login_path, :id => "splash"%></button></p>
 	</div>
 
-	<div class ="col-md-4" align ="center">
-		<p><button class="btn btn-primary btn-lg btn-material-blue">
-		<%=link_to "Try It Now", search_form_path, :id => "splash"%></button></p>
-	</div>
-
-
 
 </div> 
+
+</div>

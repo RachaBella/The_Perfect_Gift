@@ -172,6 +172,7 @@ DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   bcrypt (~> 3.1.7)
   bootstrap-material-design
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
   figaro

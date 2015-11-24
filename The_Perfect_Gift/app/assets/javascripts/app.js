@@ -2,12 +2,11 @@ var background = ["#aa00ff", "#d81b60","#ff1744","#1e88e5","#3949ab","#00bcd4","
 
 $(document).ready( function() {
 	loadFunctions()
-
 });
 
 function loadFunctions()
 {
-	$('#addButton').on('click', function () {
+	$('a#addButton').on('click', function () {
 		$('#recipient-form').slideDown(350);
 		$('html, body').animate({
         scrollTop: $("#recipient-form").offset().top
@@ -101,8 +100,7 @@ function loadFunctions()
     	$("#addGift").css('background-color',background[j])
 
     	
-    })
-
+    });
 
 
 
