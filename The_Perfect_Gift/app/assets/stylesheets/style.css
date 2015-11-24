@@ -20,7 +20,7 @@ li#abouttab {
 }
 li#teamtab {
   padding: 10px 0px;
-  border-left: 1px solid black;
+  border-right: 1px solid black;
   border-top: 1px solid black;
   border-radius: 10px;
 }
@@ -189,12 +189,6 @@ h1.tag-line {
     color:white;
     text-decoration: none;
 } 
-
-.welcome-bg{
-    position: absolute; height: 100%; width: 100%;
-    background-size: contain;
-    background-size: 100% 100%;
-}
 
 .tag-line {
     text-align: center;
