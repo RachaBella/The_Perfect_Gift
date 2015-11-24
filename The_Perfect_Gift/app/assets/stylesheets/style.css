@@ -1,4 +1,40 @@
+h3.aboutus.center {
+  margin: 0;
+  padding: 15px 0px;
+  font-size: 30px;
+}
+p.aboutus {
+  margin-top: 10px;
+}
+ul.nav.nav-tabs {
+  background-color: #1565c0;
+}
 
+li#abouttab {
+  padding: 10px 0px;
+  border-right: 1px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}
+li#teamtab {
+  padding: 10px 0px;
+  border-left: 1px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+div#about {
+  background-color: white;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+div#team {
+  background-color: white;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
 /* Gift Carousel CSS */
 .carousel-inner{
     padding:0px;
