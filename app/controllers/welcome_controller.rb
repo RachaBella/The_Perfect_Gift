@@ -19,9 +19,7 @@ class WelcomeController < ApplicationController
 		@recipient= Recipient.new
 		@gift = Gift.new
 		@recipients =  @current_user.recipients
-		# Walmart - mediorce
-		#url = 'http://api.walmartlabs.com/v1/search?query='
-		if params[:user]["recipient_id"] ==""
+		if params[:user]["recipient_id"] =="" || params[:user]["recipient_id"] ==nil
 			flash[:notice] = "Please chose the recipient for the gift"
 			redirect_to search_form_path and return
 		else

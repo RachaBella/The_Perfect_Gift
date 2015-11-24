@@ -102,6 +102,17 @@ function loadFunctions()
     	
     });
 
+    var button = document.getElementById('search-button');
+	button.onclick = function(e) {
+		e.preventDefault()
+		var div = document.getElementById('search');
+		if (div.style.display !== 'none') {
+		    div.style.display = 'block';
+		} else {
+		    div.style.display = 'block';
+		  }
+	};
+
 
 
 }
