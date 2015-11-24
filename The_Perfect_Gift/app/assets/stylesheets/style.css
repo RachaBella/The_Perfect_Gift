@@ -135,7 +135,23 @@ h5.occasion {
 /* Background image for front page */
 html body { 
     background: url("tpg-4.jpg") no-repeat center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    background-image: url("tpg-4.jpg");
+  }
 }
 
 .welcome-button {
