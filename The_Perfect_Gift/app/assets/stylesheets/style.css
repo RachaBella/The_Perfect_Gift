@@ -96,8 +96,16 @@ h5.occasion {
 }
 /* Background image for front page */
 html body { 
-    background: url("tpg-4.jpg") no-repeat center;
+    background: url("http://i.imgur.com/RgoQG1U.jpg") no-repeat center;
     background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    background-image: url("http://i.imgur.com/RgoQG1U.jpg");
+  }
 }
 
 .welcome-button {
@@ -258,11 +266,6 @@ p#keyword {
 }
 
 
-input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#keyword.addRecipientDropdown {
-  font-size: 16px;
-  color:black;
-  background-color: white;
-}
 
 /******************************************************************************/
 #login{
@@ -336,3 +339,226 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
 #login input[type="submit"]:hover{
   background:#2288bb;
 }
+
+
+/****************************************************/
+.searching input[type=text] {
+  outline: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  text-align: center;
+  width: 490px;
+  height: 60px;
+  right: 0;
+  padding: 10px 20px 12px 0px;
+  border: none;
+  font: normal 25px/normal "Century Gothic", sans-serif;
+  color: #333;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: url("");
+  background-repeat: no-repeat;
+  background-position: 26% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  border-bottom: thin solid rgba(255, 255, 255, .2);
+}
+#ss.search {
+  color: #333;
+}
+
+
+.search-button {
+  outline: none;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 4px solid rgba(255, 255, 255, 1);
+  -webkit-border-radius: 99px;
+  border-radius: 99px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: url("http://i62.tinypic.com/295aes7.png"), rgba(0, 0, 0, 0.75);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: -1px -1px 0 rgba(15, 73, 168, 0.66);
+  -webkit-transition: all 240ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 240ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 240ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 240ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.search-button:hover {
+  background: url("http://i62.tinypic.com/295aes7.png"), rgba(255, 255, 255, 0.69);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-button:active {
+  background: url("http://i62.tinypic.com/295aes7.png"), rgba(0, 0, 0, 0.73);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input.search:hover {
+  border-bottom: thin solid rgba(255, 255, 255, .9);
+  -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, .2);
+  -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, .2);
+  box-shadow: 0 8px 6px -6px rgba(255, 255, 255, .2);
+}
+
+/************************************************************************/
+.recipient-show select {
+   background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-color:#1565c0;
+  display: block !important;
+  background-repeat:no-repeat;
+  background-position: right 3px top 25px;
+  background-size: 16px 16px;
+  color:white;
+  height: 58px !important;
+  padding:12px;
+  font-family:"Century Gothic", sans-serif;
+  font-size:20px;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-appearance: none;
+  border:0;
+  outline:0;
+  -webkit-transition:0.3s ease all;
+  -moz-transition:0.3s ease all;
+  -ms-transition:0.3s ease all;
+  -o-transition:0.3s ease all;
+  transition:0.3s ease all;
+}
+
+.recipient-show select:focus, select:active {
+  border:0;
+  outline:0;
+}
+
+.recipient-show select:hover {
+  background-color:#2980B9;
+}
+
+/***********************************************************************************/
+.occasion-show select {
+   background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-color:#1565c0;
+  display: block !important;
+  background-repeat:no-repeat;
+  background-position: right 3px top 25px;
+  background-size: 16px 16px;
+  color:white;
+  height: 58px !important;
+  padding:12px;
+  font-family:"Century Gothic", sans-serif;
+  font-size:20px;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-appearance: none;
+  border:0;
+  outline:0;
+  -webkit-transition:0.3s ease all;
+  -moz-transition:0.3s ease all;
+  -ms-transition:0.3s ease all;
+  -o-transition:0.3s ease all;
+  transition:0.3s ease all;
+}
+
+.occasion-show select:focus, select:active {
+  border:0;
+  outline:0;
+}
+
+.occasion-show select:hover {
+  background-color:#2980B9;
+}
+
+.backgroundimg {
+ background: url(http://i.imgur.com/WSQCGCP.jpg)no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+#recipient-form{
+  position: middle
+}
+
+#first_name {
+  position: middle
+}
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+p {
+  font-family:'Century Gothic', sans-serif;
+  font-size: 26px;
+  text-align: center
+}
+
+input#first_name {
+  font-size: 2rem;
+}
+
+input#email {
+  font-size: 2rem;
+}
+
+#addRecipient {
+  background: #1565c0
+}
+
+#cancelButton {
+  background: #1565c0
+}
+

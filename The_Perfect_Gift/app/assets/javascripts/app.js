@@ -31,7 +31,7 @@ function loadFunctions()
 		}).done( function(response) {
 			console.log('the response from adding a new recipient is', response.recipient);
 			if (select != null) {
-				select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+				//select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
 			} else {
 				$('.recipientList').append("<a href='/users/"+id+"/recipients/"+response.recipient.id+"/gifts'>"+response.recipient.name+"</a>")
 				$('#noRecipient').remove();
@@ -101,6 +101,17 @@ function loadFunctions()
 
     	
     });
+
+    var button = document.getElementById('search-button');
+	button.onclick = function(e) {
+		e.preventDefault()
+		var div = document.getElementById('search');
+		if (div.style.display !== 'none') {
+		    div.style.display = 'block';
+		} else {
+		    div.style.display = 'block';
+		  }
+	};
 
 
 
