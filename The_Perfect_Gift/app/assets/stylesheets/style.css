@@ -134,7 +134,7 @@ h5.occasion {
 }
 /* Background image for front page */
 html body { 
-    background: url("tpg-4.jpg") no-repeat center;
+    background: url("http://i.imgur.com/RgoQG1U.jpg") no-repeat center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -151,7 +151,7 @@ html body {
   body {
     /* The file size of this background image is 93% smaller
        to improve page load speed on mobile internet connections */
-    background-image: url("tpg-4.jpg");
+    background-image: url("http://i.imgur.com/RgoQG1U.jpg");
   }
 }
 
