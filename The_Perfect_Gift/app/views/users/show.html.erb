@@ -61,7 +61,7 @@
 	<% @recipients.each do |recipient|%>
 	<div class="col-xs-3 col-sm-3 col-md-3" align="center"> 
 
-        		<%= link_to "#{recipient.name.capitalize}'s Gifts", user_recipient_gifts_path(@user, recipient), :class => "glyphicon glyphicon-gift btn-material-blue-800 btn-sm recipient-name", :id => "recipient-name"%>
+        		<%= link_to "#{recipient.name.capitalize}'s Gifts", user_recipient_gifts_path(@user, recipient), :class => "btn-material-blue-800 btn-sm recipient-name", :id => "recipient-name"%>
      	<!-- glyphicon glyphicon-gift -->
     </div>	
 <% end %>
