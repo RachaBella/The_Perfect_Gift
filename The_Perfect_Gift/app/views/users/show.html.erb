@@ -28,7 +28,7 @@
 		</div>
 		<div class="col-xs-3 show-add-recip" align="left">
 			<br>
-			<a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
+			<a class="btn-floating btn-large waves-effect waves-light btn-material-blue-800" id='addButton'>
 				<i class="material-icons">+</i>
 			</a>
 		</div>
@@ -59,14 +59,10 @@
 <div class= "recipientList recipient-show" id="<%=@current_user.id%>">
 <%if @recipients.count !=0 %>
 	<% @recipients.each do |recipient|%>
-	<div class="col-xs-4 col-sm-4 col-md-4"> 
-    	<div class="thumbnail">
-      		<div class="caption">
-        		<h5 id="recipient-name" align="center">
-        		<%= link_to "#{recipient.name.capitalize}'s Gifts", user_recipient_gifts_path(@user, recipient), :class => "recipient-name" %>
-        		</h5>
-       		</div>
-     	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3" align="center"> 
+
+        		<%= link_to "#{recipient.name.capitalize}'s Gifts", user_recipient_gifts_path(@user, recipient), :class => "glyphicon glyphicon-gift btn-material-blue-800 btn-sm recipient-name", :id => "recipient-name"%>
+     	<!-- glyphicon glyphicon-gift -->
     </div>	
 <% end %>
 <%end%>
