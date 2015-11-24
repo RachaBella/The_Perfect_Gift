@@ -1,3 +1,17 @@
+form#new_recipient.new_recipient {
+  background-color: white;
+  padding: 15px;
+}
+input#first_name {
+  padding-top: 25px;
+  font-size: 20px;
+}
+input#email {
+  font-size: 20px;
+}
+div.row.add-recip-form {
+  margin: 0px;
+}
 h2.gifts-for-recip {
   color: white;
   text-shadow: 2px 2px black;

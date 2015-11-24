@@ -37,20 +37,20 @@
 	<div class="col s12" style="display:none" id='recipient-form'>
 		<%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm", method: "post", action: 'create',  remote: true do |f| %>
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12">
 				<%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"validate" %>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-				<%= f.text_field :email, placeholder: "Recipient email", :id => "email" %>
+				<%= f.text_field :email, placeholder: "Recipient email (Optional)", :id => "email" %>
 			</div>
 		</div>
-
-		<button id="addRecipient" class="btn btn-info btn-raised">Add recipient</button> 
-		<button id="cancelButton" class="btn btn-info btn-raised">Cancel</button> 
-
+		<div class="row add-recip-form" align="center">
+		<button id="addRecipient" class="btn btn-material-blue-800 btn-info btn-raised add-recip-form">Add recipient</button> 
+		<button id="cancelButton" class="btn btn-material-blue-800 btn-info btn-raised add-recip-form">Cancel</button> 
+		</div>
 		<%end%>
 	</div>
 
