@@ -44,30 +44,6 @@ div#team {
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
-/* Gift Carousel CSS */
-.carousel-inner{
-    padding:0px;
-   list-style:none;
-
-}
-.carousel-indicators li {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    margin: 10px;
-    text-indent: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    background-color: #0000ff;
-    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
-}
-.carousel-indicators .active {
-    width: 48px;
-    height: 48px;
-    margin: 10px;
-    background-color: #ffff99;
-}
 
 
 /* Sign In formatting*/
@@ -79,16 +55,6 @@ div#team {
 #gift-title {
   font-size: 20px;
   font-weight: bold;
-}
-
-input#user_username, input#user_email, input#user_password, input#signin-input {
-    padding: 7px;
-    border: solid 5px #0288D1;
-    background-color: white;
-    margin: 2px;
-    color: black;
-    font-size: 18px;
-    width: 375px;
 }
 
 a.home-button, a.home-button:hover, span.home-button {
