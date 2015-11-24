@@ -23,7 +23,7 @@ class RecipientsController < ApplicationController
                         }
             end
 		else
-			redirect_to root_path
+			redirect_to search_form_path
 		end
 	end
 
