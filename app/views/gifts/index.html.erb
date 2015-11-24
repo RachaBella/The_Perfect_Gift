@@ -17,13 +17,10 @@
       	<% des = Gift.find(gift.gift_id).description%>
       	<% des = truncate(des, :length => 200, :separator => ".")%>
         <p><%= des %></p>
-        <p align="center"><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-lg btn-primary btn-material-blue-800" id='buy-now'>Buy Now</a></p>
-
-       
-
-
-
-		
+        <p align="center">
+          <%= link_to "Buy Now", "#{Gift.find(gift.gift_id).link}", :class => "btn btn-md btn-primary btn-material-blue-800"%>
+          <%= link_to "Remove", user_recipient_gift_path(@user, @recipient, gift), method: :delete, action: :destroy, :class => "btn btn-md btn-primary btn-material-blue-800"%>
+        </p>
       </div>
     </div>
   </div>

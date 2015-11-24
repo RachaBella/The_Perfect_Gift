@@ -124,11 +124,10 @@ div.show-add-recip {
 /* Background image for front page */
 html body { 
     background: url("http://i.imgur.com/RgoQG1U.jpg") no-repeat center;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 150% 200%;
+    background-size: 100% 600%;
 }
 
 @media only screen and (max-width: 767px) {
