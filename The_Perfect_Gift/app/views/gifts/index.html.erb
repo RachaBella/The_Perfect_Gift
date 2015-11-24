@@ -2,14 +2,14 @@
 
 
 	<div class = "recipient-name" align="center">
-		<h2> Gifts for <%= @recipient.name%> <h2>
+		<h2 class="gifts-for-recip"> Gifts for <%= @recipient.name.capitalize %> <h2>
 	</div>
 
 
   <%@recipient_gifts.each do |gift|%>
   <div class="col-xs-12 col-sm-6 col-md-4 text:center"> 
     <div class="thumbnail">
-      <h5 class = "occasion"><%=gift.occasion%></h5>
+      <h4 class="occasion"><%=gift.occasion%></h4>
       <img src="<%=Gift.find(gift.gift_id).imageUrl%>">
       <div class="caption">
         <h5 id="gift-title"><%=Gift.find(gift.gift_id).name%></h5>
@@ -17,7 +17,7 @@
       	<% des = Gift.find(gift.gift_id).description%>
       	<% des = truncate(des, :length => 200, :separator => ".")%>
         <p><%= des %></p>
-        <p align="center"><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-primary" role="button" id = 'buy-now'>Buy Now</a></p>
+        <p class="link" align="center"><a href="<%=Gift.find(gift.gift_id).link%>" class="btn btn-lg btn-primary btn-material-blue-800" id='buy-now'>Buy Now</a></p>
 
        
 
