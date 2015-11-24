@@ -60,6 +60,7 @@ div#team {
 a.home-button, a.home-button:hover, span.home-button {
   color: white;
   font-size: 35px;
+  font-family:'Century Gothic',sans-serif;
   padding-right: 10px;
   text-decoration: none;
 }
@@ -282,7 +283,7 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
 }
 
 #login h1{
-  background:#3399cc;
+  background:#1565c0;
   padding:20px 0;
   font-size:35px;
   font-weight:300;
@@ -302,7 +303,7 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
   margin-bottom:4%;
   border:1px solid #ccc;
   padding:4%;
-  font-family:'Open Sans',sans-serif;
+  font-family:'Century Gothic',sans-serif;
   font-size:95%;
   color:#555;
 }
@@ -313,18 +314,18 @@ input#email.addRecipientDropdown, input#first_name.addRecipientDropdown, input#k
   margin-bottom:4%;
   border:1px solid #ccc;
   padding:4%;
-  font-family:'Open Sans',sans-serif;
+  font-family:'Century Gothic',sans-serif;
   font-size:95%;
   color:#555;
 }
 
 #login input[type="submit"]{
   width:100%;
-  background:#3399cc;
+  background:#1565c0;
   border:0;
   padding:4%;
-  font-family:'Open Sans',sans-serif;
-  font-size:100%;
+  font-family:'Century Gothic',sans-serif;
+  font-size:20px;
   color:#fff;
   cursor:pointer;
   transition:background .3s;
