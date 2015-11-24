@@ -52,23 +52,10 @@ div#team {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-
-=======
-input#user_username, input#user_email, input#user_password, input#signin-input {
-    padding: 7px;
-    border: solid 5px #0288D1;
-    background-color: white;
-    margin: 2px;
-    color: black;
-    font-size: 18px;
-    width: 375px;
-}
->>>>>>> chris-style
-
 a.home-button, a.home-button:hover, span.home-button {
   color: white;
   font-size: 35px;
+  font-family:'Century Gothic',sans-serif;
   padding-right: 10px;
   text-decoration: none;
 }
