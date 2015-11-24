@@ -1,34 +1,23 @@
+<body class="searchResultPage">
+  
+
 <%= render partial: "/layouts/navbar" %>
-The chosen recipient :
-<<<<<<< HEAD
+<p>The chosen recipient is</p>
 <p class="recipient_id" id = "<%= @recipientChosen.id %>">
-    <%= @recipientChosen.name %>
+    <%= @recipientChosen.name %> , for <%= @occasionChosen%>
 </p>
-
-
-=======
-
-<p class="recipient_id" id = "<%= @recipientChosen.id %>">
-    <%= @recipientChosen.name %>
-</p>
->>>>>>> chris-style
-
-The chosen occasion :
-<%= @occasionChosen%>
-<% count=0 %><br>
-
 	
 	<hr>
 		
     <div class="container">
     <div class="row">
-        <div class= "col-xs-12 col-sm-12 col-md-12 div" align="center">
-            <div class ="col-xs-12 col-sm-12 col-md-6" >
+        <div class= "div" align="center">
+            <div class ="col-xs-12 col-sm-12 col-md-6" align="center" >
             <span class ="custom-dropdown" id="drop1">
               <%= collection_select(:user, :recipient_id , @recipients, :id, :name, {:prompt=> @recipientChosen.name}, {:style => 'display: inline'})%>
             </span>
             </div>
-            <div class=" col-xs-12 col-sm-12 col-md-6">
+            <div class=" col-xs-12 col-sm-12 col-md-6" align="center">
             <span class ="custom-dropdown" id="drop2">
                 <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower'], ['Hanukah','Hanukah'],['Ramadan','Ramadan'],['Anniversary', 'Anniversary']]), {:id => 'occasion', :style => 'display: inline'}) %>
             </span>
@@ -38,7 +27,6 @@ The chosen occasion :
         <br>
         <br>    
         </div>
-        <div  >
             <div class= "Wallop Wallop--slide col-xs-12 col-sm-12 col-md-12 Demo">
                 <div class= "Wallop-list"align="center" >
                   <div class="Wallop-item Wallop-item--current" align="center">
@@ -67,8 +55,6 @@ The chosen occasion :
                 <button class="Wallop-buttonPrevious">Previous</button>
                 <button class="Wallop-buttonNext">Next</button>
             </div>
-        </div>
-
     </div>
    
       
@@ -89,6 +75,7 @@ The chosen occasion :
   
 
 </div>
+</body>
 
 
 

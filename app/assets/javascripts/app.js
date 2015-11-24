@@ -31,7 +31,7 @@ function loadFunctions()
 		}).done( function(response) {
 			console.log('the response from adding a new recipient is', response.recipient);
 			if (select != null) {
-				//select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
+				select.options[select.options.length] = new Option(response.recipient.name, response.recipient.id);
 			} else {
 				$('.recipientList').append("<a href='/users/"+id+"/recipients/"+response.recipient.id+"/gifts'>"+response.recipient.name+"</a>")
 				$('#noRecipient').remove();

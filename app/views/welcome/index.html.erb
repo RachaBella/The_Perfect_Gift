@@ -1,7 +1,11 @@
 
+
+
+
 <%= render partial: "/layouts/navbar" %>
 <div class="container">
 	
+
   <% if flash[:notice] %>
 	<div class="alert alert-dismissible alert-success">
   		<button type="button" class="close" data-dismiss="alert">×</button>
@@ -14,16 +18,30 @@
 <div class="row">
 
 	<div class ="col-md-4 col-md-offset-2" align ="center">
-		<p><button class="btn btn-primary btn-lg btn-material-blue-800">
-		<%=link_to "Sign Up", new_user_path, :id => "splash" %></button></p>
+		<ul class="special">
+ 			 <li class="special">
+				<%=link_to  new_user_path, :id => "splash", class:'round vert' do %>
+					Sign Up
+					<span class="round">But only if you are new here.</span>
+				<%end%>
+			</li>
+		</ul>
 	</div>
 
 	<div class ="col-md-4" align ="center">
-	<p><button class="btn btn-primary btn-lg btn-material-blue-800">
-		<%=link_to "Login", login_path, :id => "splash"%></button></p>
+		<ul class="special">
+ 			 <li class="special">
+				<%=link_to  login_path, :id => "splash", class:'round vert' do%>
+					Login
+					<span class="round">That is, if you already have an account.</span>
+				<%end%>
+			</li>
+		</ul>
+		
 	</div>
 
 
-</div> 
 
 </div>
+</div> 
+
