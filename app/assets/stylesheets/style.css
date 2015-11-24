@@ -1,8 +1,18 @@
-
+h2.gifts-for-recip {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 45px;
+}
+h5.occasion {
+  color: #1565c0;
+}
 h3.aboutus.center {
   margin: 0;
   padding: 15px 0px;
   font-size: 30px;
+}
+h3.teamstuff {
+  margin: 0px;
 }
 p.aboutus {
   margin-top: 10px;
@@ -118,12 +128,7 @@ html body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+    background-size: 150% 200%;
 }
 
 @media only screen and (max-width: 767px) {
