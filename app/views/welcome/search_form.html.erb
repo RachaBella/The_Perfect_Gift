@@ -1,0 +1,80 @@
+<%= render partial: "/layouts/navbar" %>
+
+  <% if flash[:notice] %>
+	<div class="alert alert-dismissible alert-success">
+  		<button type="button" class="close" data-dismiss="alert">×</button>
+  	<%= flash[:notice] %>
+	</div>
+  <% end %> 
+  
+    <div class="container">
+		<div class = "row">
+		<div>
+			<%= form_tag("/search", method: "get") do %>
+			<p style="font-weight:bold"> Choose for who:</p>
+				<div class="col l6 col s12">
+					<div class ="col l6 col s12 recipient-show" id="<%=@current_user.id%>">
+				   		<% if @recipients.count !=0 %>
+				    	<%= collection_select(:user, :recipient_id , @recipients, :id, :name, {:prompt=>true}, {:class =>"form-control"})%>
+				    </div>
+				    <br>
+				    <br>
+				    <div class='col l6 col s12'>
+				    <p style="font-weight:bold"> Or add a new one</p>
+					    	<a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
+				            <i class="material-icons">+</i>
+				           	</a>
+				    </div>
+				    <% else %>
+				    <div class="col-xs-12 col-lg-4 recipient-show" id="<%=@current_user.id%>">
+				    	<div class='col l6 col s12' id='noRecipient'>
+				    		<br>
+				    		<p style="font-weight:bold" >You have no recipients yet, create a new one</p>
+				    	</div>
+				    	<div class='col l6 col s12'>
+					    	<a class="btn-floating btn-large waves-effect waves-light red" id='addButton'>
+				            <i class="material-icons">+</i>
+				           	</a>
+				    	</div>
+		     		</div>
+				    <%end%>
+	    		</div>
+
+	    		<div class="col l12 col s12">
+				    <p style= "font-weight:bold ">Which occasion ? </p>
+				    <%= select_tag(:occasion, options_for_select([['Birthday','Birthday'],['Wedding','Wedding'],['Christmas','Christmas'],['Thanksgiving','Thanksgiving'],['New year','New Year'],['Baby Shower', 'Baby Shower'], ['Wedding Shower', 'Wedding Shower']]), {:class =>"form-control"}) %>
+    			</div>
+				<div class="col l12 col s12">
+				<br>
+					<p style= "font-weight:bold; font-color: black"> Search for : </p>
+					<%= text_field_tag(:keyword) %>
+					<%= submit_tag("Search") %>	
+				</div>
+				
+			<% end %>
+		</div>
+		
+    		<div class="col s12 " style="display:none" id='recipient-form'>
+
+			        <%= form_for @recipient, url: "/users/#{@current_user.id}/recipients", :class => "recipientForm",method: "post", action: 'create',  remote: true do |f| %>
+			            <div class="row">
+			              <div class="input-field col s6">
+			              <%= f.text_field :name, placeholder: "Recipient Name", :id => "first_name" , :class =>"validate" %>
+			              </div>
+			              
+			            </div>
+			            <div class="row">
+			              <div class="input-field col s12">
+			                <%= f.text_field :email, placeholder: "Recipient email", :id => "email" %>
+			              </div>
+			            </div>
+			            
+			            <button id="addRecipient" class="btn btn-info btn-raised">Add recipient</button> 
+			            <button id="cancelButton" class="btn btn-info btn-raised">Cancel</button>    
+			      	<%end%>
+    		</div>
+			
+		</div>
+	</div>
+    
+

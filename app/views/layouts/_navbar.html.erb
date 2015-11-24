@@ -1,0 +1,40 @@
+<div class = "nav">
+<div class="navbar navbar-material-blue-800">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-danger-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+        <% if @current_user == nil %>
+          <span class="active">
+            <%= link_to "The Perfect Gift", root_path, :class => "home-button" %>
+          </span>
+        <% else %>
+          <span class="home-button">The Perfect Gift</span>
+        <% end %>
+  </div>
+  <div class="navbar-collapse collapse navbar-danger-collapse">
+    <ul class="nav navbar-nav navbar-left">
+      <li><%= link_to "About Us", aboutus_path %></li>
+      <li><%= link_to "Search", search_form_path %></li>
+      <% if @current_user %>
+        <li><%= link_to "My Profile", user_path(@current_user) %></li>
+      <%end%>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+      
+    <% if @current_user %>
+    			<li><%= link_to "LOG OUT", logout_path, method: :destroy, id: @current_user.id, class: "user_id" %></li>
+    <% else %>
+
+      <li><%= link_to "SIGN UP", new_user_path(@current_user) %></li>
+			<li><%= link_to "LOGIN", login_path(@current_user) %></li>
+
+    <% end %>
+    </ul>
+  </div>
+</div>
+</div>
+
